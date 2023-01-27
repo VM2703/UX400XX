@@ -1,0 +1,9 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="student00.sap.training.dynamicpage.controller.NotFound">
+	   <MessagePage
+         title="{i18n>notFoundMessageTitle}"
+         text="{i18n>notFoundMessageText}"
+         description="{i18n>notFoundMessageDescription}"
+         showNavButton="true" 
+         navButtonPress="onNavBack"/>
+</mvc:View>

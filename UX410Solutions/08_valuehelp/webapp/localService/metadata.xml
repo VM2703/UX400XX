@@ -30,6 +30,7 @@
                 <Property Name="Carrname" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Fluggesellschaft" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Currcode" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Währ. d. Flugg." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
                 <Property Name="Url" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="URL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="to_Flight" Relationship="ZUX_TRAVEL_SRV.CarrIdToFlights" FromRole="FromRole_CarrIdToFlights" ToRole="ToRole_CarrIdToFlights"/>
             </EntityType>
             <EntityType Name="UX_C_Connection_TP" sap:content-version="1">
                 <Key>
@@ -63,14 +64,26 @@
                 <End Type="ZUX_TRAVEL_SRV.UX_C_Booking_TP" Multiplicity="*" Role="ToRole_FlightToBookings"/>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_FlightToBookings">
-                        <PropertyRef Name="Carrid"/>
-                        <PropertyRef Name="Connid"/>
                         <PropertyRef Name="Fldate"/>
+                        <PropertyRef Name="Connid"/>
+                        <PropertyRef Name="Carrid"/>
                     </Principal>
                     <Dependent Role="ToRole_FlightToBookings">
-                        <PropertyRef Name="Carrid"/>
-                        <PropertyRef Name="Connid"/>
                         <PropertyRef Name="Fldate"/>
+                        <PropertyRef Name="Connid"/>
+                        <PropertyRef Name="Carrid"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="CarrIdToFlights" sap:content-version="1">
+                <End Type="ZUX_TRAVEL_SRV.UX_C_Carrier_TP" Multiplicity="1" Role="FromRole_CarrIdToFlights"/>
+                <End Type="ZUX_TRAVEL_SRV.UX_C_Flight_TP" Multiplicity="*" Role="ToRole_CarrIdToFlights"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_CarrIdToFlights">
+                        <PropertyRef Name="Carrid"/>
+                    </Principal>
+                    <Dependent Role="ToRole_CarrIdToFlights">
+                        <PropertyRef Name="Carrid"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -79,6 +92,10 @@
                 <EntitySet Name="UX_C_Carrier_TP" EntityType="ZUX_TRAVEL_SRV.UX_C_Carrier_TP" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
                 <EntitySet Name="UX_C_Connection_TP" EntityType="ZUX_TRAVEL_SRV.UX_C_Connection_TP" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
                 <EntitySet Name="UX_C_Flight_TP" EntityType="ZUX_TRAVEL_SRV.UX_C_Flight_TP" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="CarrIdToFlightsSet" Association="ZUX_TRAVEL_SRV.CarrIdToFlights" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="UX_C_Carrier_TP" Role="FromRole_CarrIdToFlights"/>
+                    <End EntitySet="UX_C_Flight_TP" Role="ToRole_CarrIdToFlights"/>
+                </AssociationSet>
                 <AssociationSet Name="FlightToBookingsSet" Association="ZUX_TRAVEL_SRV.FlightToBookings" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="UX_C_Flight_TP" Role="FromRole_FlightToBookings"/>
                     <End EntitySet="UX_C_Booking_TP" Role="ToRole_FlightToBookings"/>

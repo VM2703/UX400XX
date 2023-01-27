@@ -31,6 +31,7 @@
                 <Property Name="Currcode" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Währ. d. Flugg." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
                 <Property Name="Url" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="URL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="to_Flight" Relationship="ZUX_TRAVEL_SRV.CarrIdToFlights" FromRole="FromRole_CarrIdToFlights" ToRole="ToRole_CarrIdToFlights"/>
+                <NavigationProperty Name="to_Connection" Relationship="ZUX_TRAVEL_SRV.CarrIdToConnections" FromRole="FromRole_CarrIdToConnections" ToRole="ToRole_CarrIdToConnections"/>
             </EntityType>
             <EntityType Name="UX_C_Connection_TP" sap:content-version="1">
                 <Key>
@@ -87,11 +88,27 @@
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
+            <Association Name="CarrIdToConnections" sap:content-version="1">
+                <End Type="ZUX_TRAVEL_SRV.UX_C_Carrier_TP" Multiplicity="1" Role="FromRole_CarrIdToConnections"/>
+                <End Type="ZUX_TRAVEL_SRV.UX_C_Connection_TP" Multiplicity="*" Role="ToRole_CarrIdToConnections"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_CarrIdToConnections">
+                        <PropertyRef Name="Carrid"/>
+                    </Principal>
+                    <Dependent Role="ToRole_CarrIdToConnections">
+                        <PropertyRef Name="Carrid"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
             <EntityContainer Name="ZUX_TRAVEL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
                 <EntitySet Name="UX_C_Booking_TP" EntityType="ZUX_TRAVEL_SRV.UX_C_Booking_TP" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
                 <EntitySet Name="UX_C_Carrier_TP" EntityType="ZUX_TRAVEL_SRV.UX_C_Carrier_TP" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
                 <EntitySet Name="UX_C_Connection_TP" EntityType="ZUX_TRAVEL_SRV.UX_C_Connection_TP" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
                 <EntitySet Name="UX_C_Flight_TP" EntityType="ZUX_TRAVEL_SRV.UX_C_Flight_TP" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="CarrIdToConnectionsSet" Association="ZUX_TRAVEL_SRV.CarrIdToConnections" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="UX_C_Carrier_TP" Role="FromRole_CarrIdToConnections"/>
+                    <End EntitySet="UX_C_Connection_TP" Role="ToRole_CarrIdToConnections"/>
+                </AssociationSet>
                 <AssociationSet Name="CarrIdToFlightsSet" Association="ZUX_TRAVEL_SRV.CarrIdToFlights" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="UX_C_Carrier_TP" Role="FromRole_CarrIdToFlights"/>
                     <End EntitySet="UX_C_Flight_TP" Role="ToRole_CarrIdToFlights"/>
