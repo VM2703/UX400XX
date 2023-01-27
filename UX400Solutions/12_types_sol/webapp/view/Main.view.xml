@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="sap.training.types.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    displayBlock="true"
+>
+
+    <f:SimpleForm>
+		<f:content>
+			<Label text="Carrier"/>
+			<Input value="{ path: '/carrId',
+							type: 'sap.ui.model.type.String',
+							constraints: {minLength : 1, maxLength : 3} }"/>
+			<Label text="Flight connection"/>
+			<Input core:require="{ConnId: 'sap/training/types/model/type/ConnId'}"
+                   value="{ path: '/connId',
+							type: 'sap.training.types.model.type.ConnId' }"/>
+		</f:content>
+	</f:SimpleForm>
+	
+</mvc:View>

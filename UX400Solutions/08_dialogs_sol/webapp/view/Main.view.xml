@@ -1,0 +1,16 @@
+<mvc:View
+    controllerName="sap.training.dialogs.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    displayBlock="true"
+>
+
+	<l:VerticalLayout>
+		<l:content>
+			<Button press="onOpenDialog" text="Open dialog"/>
+			<Text id="idText"/>
+		</l:content>
+	</l:VerticalLayout>
+    
+</mvc:View>

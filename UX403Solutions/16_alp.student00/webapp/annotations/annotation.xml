@@ -1,0 +1,49 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZCDS_UX403_ALP_00_CDS/$metadata">
+        <edmx:Include Namespace="ZCDS_UX403_ALP_00_CDS" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="SAP.ZCDS_UX403_ALP_00Type/ProductCategory">
+                <Annotation Term="Common.ValueList" Qualifier="VisualFilter">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZCDS_UX403_ALP_00"/>
+                        <PropertyValue Property="PresentationVariantQualifier" String="VisualFilter"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ProductCategory"/>
+                                    <PropertyValue Property="ValueListProperty" String="ProductCategory"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>            
+            <Annotation Term="Common.ValueList" Qualifier="VisualFilter">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="ZCDS_UX403_ALP_00"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterIn">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="ProductCategory"/>
+                                <PropertyValue Property="ValueListProperty" String="ProductCategory"/>
+                            </Record>
+                            <Record Type="Common.ValueListParameterOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="ProductCategory"/>
+                                <PropertyValue Property="ValueListProperty" String="ProductCategory"/>
+                            </Record>
+                            <Record Type="Common.ValueListParameterOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="ProductType"/>
+                                <PropertyValue Property="ValueListProperty" String="ProductType"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>            
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

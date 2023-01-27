@@ -1,0 +1,10 @@
+<mvc:View
+    controllerName="sap.training.components.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    
+    <Button press="onOpenDialog" text="{i18n>showDialogButtonText}"/>
+    
+</mvc:View>

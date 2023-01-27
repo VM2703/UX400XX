@@ -1,0 +1,37 @@
+<mvc:View xmlns:layout="sap.ui.layout" controllerName="training.sap.myfirstproject.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    
+    <Page id="page" title="{i18n>title}">
+    
+        <layout:VerticalLayout >
+        
+            <mvc:XMLView viewName="training.sap.myfirstproject.view.MyFilterBar"></mvc:XMLView>
+            
+            <Text text="Hi there {/name}!" />
+            
+            <Button text="Is it monday?" press=".onCheckMondayButtonPressed" />
+            
+            <Button text="Show Weekday" press=".onWeekdayPressed" />
+            
+            <Button text="Press me" press=".onButtonPressed" />
+            
+            <Button text="Patience - Is it monday?" press=".onCheckMondayButtonPressedPatience" />
+            
+            
+            <Label labelFor="nameInput" text="Name:"></Label>
+            <Input id="nameInput" value="{/name}" width="7rem" valueLiveUpdate="true"></Input>
+
+            <core:Fragment fragmentName="training.sap.myfirstproject.view.MyFragment" type="XML" /> 
+
+
+            
+            <!-- fragments - unit 8 - example missing -->
+            
+            <!-- binding new project for Unit9 - Exercise 9: Use property binding -->
+            
+        </layout:VerticalLayout>
+        
+    </Page>
+</mvc:View>

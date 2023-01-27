@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZCDS_UX403_ALP_00_CDS" xml:lang="de" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="ZCDS_UX403_ALP_00Type" sap:label="UX403 Analytical List Page" sap:semantics="aggregate" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="DISPLAYCURRENCY" sap:creatable="false" sap:updatable="false" sap:value-list="standard" sap:semantics="currency-code"/>
+                <Property Name="Customer" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:text="Customer_T" sap:label="Customer" sap:quickinfo="EPM: Geschäftspartner-ID" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="Customer_T" Type="Edm.String" MaxLength="1333" sap:label="Customer (Beschreibung)" sap:quickinfo="EPM: Geschäftspartner-ID" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="ProductCategory" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:label="Product Category" sap:quickinfo="EPM: Produktkategorie" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="ProductType" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="Product Type" sap:quickinfo="EPM: Produkttyp-Code" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="Product" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Product" sap:quickinfo="EPM: Produkt-ID" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="SalesOrder" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Sales Order" sap:quickinfo="EPM: Kundenauftragsnummer" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="SalesOrderItem" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:super-ordinate="SalesOrder" sap:label="Sales Order Item" sap:quickinfo="EPM: Zeilennummer der Kundenauftragsposition" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="GrossAmount" Type="Edm.Decimal" Precision="42" Scale="2" sap:aggregation-role="measure" sap:filterable="false" sap:text="GrossAmount_F" sap:unit="Currency" sap:updatable="false" sap:label="Gross Amount" sap:creatable="false"/>
+                <Property Name="GrossAmount_F" Type="Edm.String" MaxLength="60" sap:label="Gross Amount (Formatiert)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Currency" sap:label="DISPLAYCURRENCY (Stammdaten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Currency_ID"/>
+                </Key>
+                <Property Name="Currency_ID" Type="Edm.String" Nullable="false" MaxLength="5" sap:text="CurrencyText" sap:label="DISPLAYCURRENCY" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="CurrencyText" Type="Edm.String" sap:label="DISPLAYCURRENCY (Beschreibung)" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="CurrencyResult" sap:label="DISPLAYCURRENCY (Gebuchte Daten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Currency"/>
+                </Key>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="DISPLAYCURRENCY" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer" Type="Edm.String" MaxLength="10" sap:text="Customer_T" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer_T" Type="Edm.String" sap:label="Customer (Beschreibung)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProductCategory" Type="Edm.String" MaxLength="40" sap:label="Product Category" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ProductType" Type="Edm.String" MaxLength="2" sap:label="Product Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Product" Type="Edm.String" MaxLength="10" sap:label="Product" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrder" Type="Edm.String" MaxLength="10" sap:label="Sales Order" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrderItem" Type="Edm.String" MaxLength="10" sap:super-ordinate="SalesOrder" sap:label="Sales Order Item" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="Customer" sap:label="Customer (Stammdaten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Customer_ID"/>
+                </Key>
+                <Property Name="Customer_ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:text="CustomerText" sap:label="Customer" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="CustomerText" Type="Edm.String" sap:label="Customer (Beschreibung)" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="CustomerResult" sap:label="Customer (Gebuchte Daten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Customer"/>
+                </Key>
+                <Property Name="Customer" Type="Edm.String" Nullable="false" MaxLength="10" sap:text="CustomerText" sap:label="Customer" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="CustomerText" Type="Edm.String" sap:label="Customer (Beschreibung)" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="DISPLAYCURRENCY" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ProductCategory" Type="Edm.String" MaxLength="40" sap:label="Product Category" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ProductType" Type="Edm.String" MaxLength="2" sap:label="Product Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Product" Type="Edm.String" MaxLength="10" sap:label="Product" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrder" Type="Edm.String" MaxLength="10" sap:label="Sales Order" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrderItem" Type="Edm.String" MaxLength="10" sap:super-ordinate="SalesOrder" sap:label="Sales Order Item" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="ProductCategory" sap:label="Product Category (Stammdaten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProductCategory_ID"/>
+                </Key>
+                <Property Name="ProductCategory_ID" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Product Category" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="ProductCategoryResult" sap:label="Product Category (Gebuchte Daten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProductCategory"/>
+                </Key>
+                <Property Name="ProductCategory" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Product Category" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="DISPLAYCURRENCY" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer" Type="Edm.String" MaxLength="10" sap:text="Customer_T" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer_T" Type="Edm.String" sap:label="Customer (Beschreibung)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProductType" Type="Edm.String" MaxLength="2" sap:label="Product Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Product" Type="Edm.String" MaxLength="10" sap:label="Product" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrder" Type="Edm.String" MaxLength="10" sap:label="Sales Order" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrderItem" Type="Edm.String" MaxLength="10" sap:super-ordinate="SalesOrder" sap:label="Sales Order Item" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="ProductType" sap:label="Product Type (Stammdaten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProductType_ID"/>
+                </Key>
+                <Property Name="ProductType_ID" Type="Edm.String" Nullable="false" MaxLength="2" sap:text="ProductTypeText" sap:label="Product Type" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ProductTypeText" Type="Edm.String" sap:label="Product Type (Beschreibung)" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="ProductTypeResult" sap:label="Product Type (Gebuchte Daten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProductType"/>
+                </Key>
+                <Property Name="ProductType" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Product Type" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="DISPLAYCURRENCY" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer" Type="Edm.String" MaxLength="10" sap:text="Customer_T" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer_T" Type="Edm.String" sap:label="Customer (Beschreibung)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProductCategory" Type="Edm.String" MaxLength="40" sap:label="Product Category" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Product" Type="Edm.String" MaxLength="10" sap:label="Product" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrder" Type="Edm.String" MaxLength="10" sap:label="Sales Order" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrderItem" Type="Edm.String" MaxLength="10" sap:super-ordinate="SalesOrder" sap:label="Sales Order Item" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="Product" sap:label="Product (Stammdaten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Product_ID"/>
+                </Key>
+                <Property Name="Product_ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:text="ProductText" sap:label="Product" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ProductText" Type="Edm.String" sap:label="Product (Beschreibung)" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="ProductResult" sap:label="Product (Gebuchte Daten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Product"/>
+                </Key>
+                <Property Name="Product" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Product" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="DISPLAYCURRENCY" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer" Type="Edm.String" MaxLength="10" sap:text="Customer_T" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer_T" Type="Edm.String" sap:label="Customer (Beschreibung)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProductCategory" Type="Edm.String" MaxLength="40" sap:label="Product Category" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ProductType" Type="Edm.String" MaxLength="2" sap:label="Product Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrder" Type="Edm.String" MaxLength="10" sap:label="Sales Order" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrderItem" Type="Edm.String" MaxLength="10" sap:super-ordinate="SalesOrder" sap:label="Sales Order Item" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="SalesOrder" sap:label="Sales Order (Stammdaten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SalesOrder_ID"/>
+                </Key>
+                <Property Name="SalesOrder_ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:text="SalesOrderText" sap:label="Sales Order" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="SalesOrderText" Type="Edm.String" sap:label="Sales Order (Beschreibung)" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="SalesOrderResult" sap:label="Sales Order (Gebuchte Daten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SalesOrder"/>
+                </Key>
+                <Property Name="SalesOrder" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Order" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="DISPLAYCURRENCY" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer" Type="Edm.String" MaxLength="10" sap:text="Customer_T" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer_T" Type="Edm.String" sap:label="Customer (Beschreibung)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProductCategory" Type="Edm.String" MaxLength="40" sap:label="Product Category" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ProductType" Type="Edm.String" MaxLength="2" sap:label="Product Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Product" Type="Edm.String" MaxLength="10" sap:label="Product" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="SalesOrderItem" Type="Edm.String" MaxLength="10" sap:super-ordinate="SalesOrder" sap:label="Sales Order Item" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="SalesOrderItem" sap:label="Sales Order Item (Stammdaten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SalesOrderItem_ID"/>
+                    <PropertyRef Name="SalesOrder"/>
+                </Key>
+                <Property Name="SalesOrderItem_ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:super-ordinate="SalesOrder" sap:text="SalesOrderItemText" sap:label="Sales Order Item" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="SalesOrderItemText" Type="Edm.String" sap:label="Sales Order Item (Beschreibung)" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="SalesOrder" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Order Item (Sales Order)" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="SalesOrderItemResult" sap:label="Sales Order Item (Gebuchte Daten)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SalesOrderItem"/>
+                    <PropertyRef Name="SalesOrder"/>
+                </Key>
+                <Property Name="SalesOrderItem" Type="Edm.String" Nullable="false" MaxLength="10" sap:super-ordinate="SalesOrder" sap:label="Sales Order Item" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="SalesOrder" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Order Item (Sales Order)" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="DISPLAYCURRENCY" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer" Type="Edm.String" MaxLength="10" sap:text="Customer_T" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Customer_T" Type="Edm.String" sap:label="Customer (Beschreibung)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProductCategory" Type="Edm.String" MaxLength="40" sap:label="Product Category" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ProductType" Type="Edm.String" MaxLength="2" sap:label="Product Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Product" Type="Edm.String" MaxLength="10" sap:label="Product" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="ODataQueryAdditionalMetadata" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ODataQueryMetadata"/>
+                </Key>
+                <Property Name="ODataQueryMetadata" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ODataQueryMetadataValue_Current" Type="Edm.String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ODataQueryMetadataValueAtDefine" Type="Edm.String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZCDS_UX403_ALP_00_CDS_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZCDS_UX403_ALP_00" EntityType="ZCDS_UX403_ALP_00_CDS.ZCDS_UX403_ALP_00Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="Currency" EntityType="ZCDS_UX403_ALP_00_CDS.Currency" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="CurrencyResults" EntityType="ZCDS_UX403_ALP_00_CDS.CurrencyResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="Customer" EntityType="ZCDS_UX403_ALP_00_CDS.Customer" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="CustomerResults" EntityType="ZCDS_UX403_ALP_00_CDS.CustomerResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ProductCategory" EntityType="ZCDS_UX403_ALP_00_CDS.ProductCategory" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ProductCategoryResults" EntityType="ZCDS_UX403_ALP_00_CDS.ProductCategoryResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ProductType" EntityType="ZCDS_UX403_ALP_00_CDS.ProductType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ProductTypeResults" EntityType="ZCDS_UX403_ALP_00_CDS.ProductTypeResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="Product" EntityType="ZCDS_UX403_ALP_00_CDS.Product" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ProductResults" EntityType="ZCDS_UX403_ALP_00_CDS.ProductResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="SalesOrder" EntityType="ZCDS_UX403_ALP_00_CDS.SalesOrder" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="SalesOrderResults" EntityType="ZCDS_UX403_ALP_00_CDS.SalesOrderResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="SalesOrderItem" EntityType="ZCDS_UX403_ALP_00_CDS.SalesOrderItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="SalesOrderItemResults" EntityType="ZCDS_UX403_ALP_00_CDS.SalesOrderItemResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="AdditionalMetadata" EntityType="ZCDS_UX403_ALP_00_CDS.ODataQueryAdditionalMetadata" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotations Target="ZCDS_UX403_ALP_00_CDS.ZCDS_UX403_ALP_00Type/Currency" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="DISPLAYCURRENCY ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="Currency"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Currency"/>
+                                    <PropertyValue Property="ValueListProperty" String="Currency_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CurrencyText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDS_UX403_ALP_00_CDS.ZCDS_UX403_ALP_00Type/Customer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Customer ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="Customer"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Customer"/>
+                                    <PropertyValue Property="ValueListProperty" String="Customer_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CustomerText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDS_UX403_ALP_00_CDS.ZCDS_UX403_ALP_00Type/ProductCategory" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Product Category ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="ProductCategory"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ProductCategory"/>
+                                    <PropertyValue Property="ValueListProperty" String="ProductCategory_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ProductCategoryText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDS_UX403_ALP_00_CDS.ZCDS_UX403_ALP_00Type/ProductType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Product Type ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="ProductType"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ProductType"/>
+                                    <PropertyValue Property="ValueListProperty" String="ProductType_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ProductTypeText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDS_UX403_ALP_00_CDS.ZCDS_UX403_ALP_00Type/Product" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Product ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="Product"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Product"/>
+                                    <PropertyValue Property="ValueListProperty" String="Product_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ProductText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDS_UX403_ALP_00_CDS.ZCDS_UX403_ALP_00Type/SalesOrder" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Sales Order ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="SalesOrder"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="ValueListProperty" String="SalesOrder_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="SalesOrderText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDS_UX403_ALP_00_CDS.ZCDS_UX403_ALP_00Type/SalesOrderItem" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Sales Order Item ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="SalesOrderItem"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="SalesOrderItem"/>
+                                    <PropertyValue Property="ValueListProperty" String="SalesOrderItem_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="SalesOrderItemText"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="ValueListProperty" String="SalesOrder"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://d50-pripro:443/sap/opu/odata/sap/ZCDS_UX403_ALP_00_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://d50-pripro:443/sap/opu/odata/sap/ZCDS_UX403_ALP_00_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

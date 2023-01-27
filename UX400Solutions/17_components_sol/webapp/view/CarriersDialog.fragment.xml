@@ -1,0 +1,37 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	
+	<Dialog id="carriersDialog" title="{i18n>carriersTitle}">
+		<content>
+			<Table items="{/UX_C_Carrier_TP}">
+				<columns>
+					<Column>
+						<Text text="{i18n>columnId}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>columnCarrname}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>columnCurrency}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>columnUrl}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{Carrid}"/>
+							<Text text="{Carrname}"/>
+							<Text text="{Currcode}"/>
+							<Text text="{Url}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<beginButton>
+			<Button press="onCloseDialog" text="{i18n>closeDialogButtonText}"/>
+		</beginButton>
+	</Dialog>
+	
+</core:FragmentDefinition>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fragments</title>
+    <style>
+        html, body, body > div, #container, #container-uiarea {
+            height: 100%;
+        }
+    </style>
+    <script
+        id="sap-ui-bootstrap"
+        src="resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_fiori_3"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-resourceroots='{
+            "sap.training.fragments": "./"
+        }'
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true"
+    ></script>
+
+    <script>
+        sap.ui.getCore().attachInit(function() {
+            
+            sap.ui.require(["sap/ui/core/mvc/View"], function(View) {
+                
+                View.create({
+                    id: "idMain",
+                    viewName: "sap.training.fragments.view.Main",
+                    type: sap.ui.core.mvc.ViewType.XML
+                }).then(function(oView) {
+                    oView.placeAt("content");	
+                });
+
+            });
+            
+        });
+    </script>
+
+</head>
+<body class="sapUiBody sapUiSizeCompact" id="content"></body>
+</html>

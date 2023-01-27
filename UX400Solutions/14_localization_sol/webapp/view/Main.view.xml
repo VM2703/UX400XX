@@ -1,0 +1,17 @@
+<mvc:View
+    controllerName="sap.training.localization.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m"
+    displayBlock="true"
+>
+
+    <f:SimpleForm editable="true">
+		<f:content>
+			<Label text="{i18n>flightRatingLabel}"/>
+			<RatingIndicator change="onRatingChange"/>
+			<Text id="idText"/>
+		</f:content>
+	</f:SimpleForm>
+	
+</mvc:View>

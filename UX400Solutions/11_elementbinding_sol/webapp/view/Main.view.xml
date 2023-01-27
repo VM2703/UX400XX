@@ -1,0 +1,73 @@
+<mvc:View
+    controllerName="sap.training.elementbinding.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	
+    <Table items="{/data}" headerText="Carriers" mode="SingleSelectMaster"
+		   selectionChange="onCarrierSelectionChange">
+		<columns>
+			<Column>
+				<header>
+					<Text text="Id"/>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Carrier name"/>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Currency"/>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Url"/>
+				</header>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{carrier/carrId}"/>
+					<Text text="{carrier/carrName}"/>
+					<Text text="{carrier/currCode}"/>
+					<Text text="{carrier/url}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+	
+	<Table id="idConnTable" items="{connections}" headerText="Flight connections">
+		<columns>
+			<Column>
+				<header>
+					<Text text="Connection ID"/>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="City from"/>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="City to"/>
+				</header>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{connId}"/>
+					<Text text="{cityFrom}"/>
+					<Text text="{cityTo}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+	
+</mvc:View>

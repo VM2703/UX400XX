@@ -1,0 +1,33 @@
+<mvc:View
+    controllerName="sap.training.aggregationbinding.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m"
+    displayBlock="true"
+>
+
+    <Carousel pages="{connections>/data}" height="50%">
+		<pages>
+			<f:SimpleForm>
+				<f:content>
+					<Label text="Carrier"/>
+					<Text text="{connections>carrId}"/>
+					<Label text="Flight number"/>
+					<Text text="{connections>connId}"/>
+					<Label text="Departure"/>
+					<Text text="{connections>cityFrom}"/>
+					<Label text="Destination"/>
+					<Text text="{connections>cityTo}"/>
+				</f:content>
+			</f:SimpleForm>
+		</pages>
+	</Carousel>
+	
+	<List items="{connections>/data}">
+		<items>
+			<StandardListItem title="{connections>carrId} {connections>connId}"
+							  description="From {connections>cityFrom} to {connections>cityTo}"/>
+		</items>
+	</List>
+	
+</mvc:View>

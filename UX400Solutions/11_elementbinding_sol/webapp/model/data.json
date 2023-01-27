@@ -1,0 +1,109 @@
+{
+    "data": [
+        {
+            "carrier": {
+                "carrId": "LH",
+                "carrName": "Lufthansa",
+                "currCode": "EUR",
+                "url": "http://www.lufthansa.com"
+            },
+            "connections": [
+                {
+                    "connId": "400",
+                    "cityFrom": "Frankfurt",
+                    "cityTo": "New York"
+                },
+                {
+                    "connId": "401",
+                    "cityFrom": "New York",
+                    "cityTo": "Frankfurt"
+                },
+                {
+                    "connId": "0455",
+                    "cityFrom": "San Francisco",
+                    "cityTo": "Frankfurt"
+                },
+                {
+                    "connId": "2402",
+                    "cityFrom": "Frankfurt",
+                    "cityTo": "Berlin"
+                }
+            ]
+        },
+        {
+            "carrier": {
+                "carrId": "JL",
+                "carrName": "Japan Airlines",
+                "currCode": "JPY",
+                "url": "http://www.jal.co.jp"
+            },
+            "connections": [
+                {
+                    "connId": "0407",
+                    "cityFrom": "Tokyo",
+                    "cityTo": "Frankfurt"
+                },
+                {
+                    "connId": "0408",
+                    "cityFrom": "Frankfurt",
+                    "cityTo": "Tokyo"
+                }
+            ]
+        },
+        {
+            "carrier": {
+                "carrId": "AZ",
+                "carrName": "Alitalia",
+                "currCode": "EUR",
+                "url": "http://www.alitalia.it"
+            },
+            "connections": [
+                {
+                    "connId": "0555",
+                    "cityFrom": "Rom",
+                    "cityTo": "Frankfurt"
+                },
+                {
+                    "connId": "0788",
+                    "cityFrom": "Rom",
+                    "cityTo": "Tokyo"
+                },
+                {
+                    "connId": "0789",
+                    "cityFrom": "Tokyo",
+                    "cityTo": "Rom"
+                },
+                {
+                    "connId": "0790",
+                    "cityFrom": "Rom",
+                    "cityTo": "Osaka"
+                }
+            ]
+        },
+        {
+            "carrier": {
+                "carrId": "DL",
+                "carrName": "Delta Airlines",
+                "currCode": "USD",
+                "url": "http://www.delta-air.com"
+            },
+            "connections": [
+                {
+                    "connId": "0106",
+                    "cityFrom": "New York",
+                    "cityTo": "Frankfurt"
+                },
+                {
+                    "connId": "1699",
+                    "cityFrom": "New York",
+                    "cityTo": "San Francisco"
+                },
+                {
+                    "connId": "1984",
+                    "cityFrom": "San Francisco",
+                    "cityTo": "New York"
+                }
+            ]
+        }
+    ]
+}

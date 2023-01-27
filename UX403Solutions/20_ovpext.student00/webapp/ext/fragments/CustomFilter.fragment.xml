@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" 
+        key="CustomProductCategory"
+        label="CustomProductCategory"
+        visibleInAdvancedArea="true">
+        <smartfilterbar:customControl>
+            <Select id="CustomProductCategory">
+             <core:Item text="All" key="All"></core:Item>
+             <core:Item text="Category 1" key="Category1"></core:Item>
+             <core:Item text="Category 2" key="Category2"></core:Item>	
+			</Select>
+        </smartfilterbar:customControl>
+    </smartfilterbar:ControlConfiguration>
+</core:FragmentDefinition>

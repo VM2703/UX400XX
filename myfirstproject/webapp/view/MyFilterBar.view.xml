@@ -1,0 +1,15 @@
+<mvc:View    
+    controllerName="training.sap.myfirstproject.controller.MyFilterBar"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    displayBlock="true"
+    height="10%"
+    busyIndicatorDelay="0"
+>
+
+   <HBox height="50px">
+        <SearchField />
+        <ComboBox />
+    </HBox>
+</mvc:View>

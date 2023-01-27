@@ -1,0 +1,16 @@
+<mvc:View controllerName="sap.training.propertybinding.controller.Main"
+   xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+   xmlns="sap.m"
+   xmlns:l="sap.ui.layout">
+   
+    <l:VerticalLayout>
+        <l:content>
+            <RadioButton groupName="GroupA" selected="{/enabled}" text="Change"></RadioButton>
+            <RadioButton groupName="GroupA" text="Display"></RadioButton>
+            
+            <Input enabled="{/enabled}" value="{/name}" valueLiveUpdate="true"/>
+            <Text text="{/name}"></Text>
+        </l:content>
+    </l:VerticalLayout>
+
+</mvc:View>

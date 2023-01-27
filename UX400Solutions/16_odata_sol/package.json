@@ -1,0 +1,34 @@
+{
+  "name": "odata",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Use an OData Model",
+  "keywords": [
+    "ui5",
+    "openui5",
+    "sapui5"
+  ],
+  "main": "webapp/index.html",
+  "devDependencies": {
+    "@sap/ux-ui5-tooling": "^1.8.5",
+    "@ui5/cli": "^2.12.0"
+  },
+  "scripts": {
+    "start": "fiori run --open 'test/flpSandbox.html?sap-client=100#saptrainingodata-display'",
+    "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
+    "deploy": "fiori verify",
+    "deploy-config": "fiori add deploy-config",
+    "start-local": "fiori run --config ./ui5-local.yaml --open 'test/flpSandbox.html?sap-client=100#saptrainingodata-display'",
+    "start-noflp": "fiori run --open 'index.html?sap-client=100'",
+    "start-mock": "fiori run --open 'test/flpSandboxMockServer.html?sap-client=100#saptrainingodata-display'",
+    "start-variants-management": "fiori run --open \"preview.html?fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true&sap-client=100#preview-app\"",
+    "unit-tests": "fiori run --open test/unit/unitTests.qunit.html",
+    "int-tests": "fiori run --open test/integration/opaTests.qunit.html"
+  },
+  "ui5": {
+    "dependencies": [
+      "@sap/ux-ui5-tooling"
+    ]
+  },
+  "sapuxLayer": "CUSTOMER_BASE"
+}

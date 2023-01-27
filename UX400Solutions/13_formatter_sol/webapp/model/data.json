@@ -1,0 +1,156 @@
+{
+    "data": [
+        {
+            "carrId": "LH",
+            "connId": "0400",
+            "price": 666,
+            "currency": "EUR",
+            "seatsMax": 385,
+            "seatsOcc": 374
+        },
+        {
+            "carrId": "JL",
+            "connId": "0407",
+            "price": 967,
+            "currency": "JPY",
+            "seatsMax": 280,
+            "seatsOcc": 47
+        },
+        {
+            "carrId": "AZ",
+            "connId": "0555",
+            "price": 185,
+            "currency": "EUR",
+            "seatsMax": 330,
+            "seatsOcc": 123
+        },
+        {
+            "carrId": "JL",
+            "connId": "0408",
+            "price": 935,
+            "currency": "JPY",
+            "seatsMax": 280,
+            "seatsOcc": 1
+        },
+        {
+            "carrId": "LH",
+            "connId": "0400",
+            "price": 599,
+            "currency": "EUR",
+            "seatsMax": 380,
+            "seatsOcc": 23
+        },
+        {
+            "carrId": "AZ",
+            "connId": "0555",
+            "price": 199,
+            "currency": "EUR",
+            "seatsMax": 310,
+            "seatsOcc": 45
+        },
+        {
+            "carrId": "LH",
+            "connId": "0400",
+            "price": 422,
+            "currency": "EUR",
+            "seatsMax": 385,
+            "seatsOcc": 280
+        },
+        {
+            "carrId": "AZ",
+            "connId": "0555",
+            "price": 210,
+            "currency": "EUR",
+            "seatsMax": 280,
+            "seatsOcc": 120
+        },
+        {
+            "carrId": "JL",
+            "connId": "0407",
+            "price": 978,
+            "currency": "JPY",
+            "seatsMax": 310,
+            "seatsOcc": 23
+        },
+        {
+            "carrId": "LH",
+            "connId": "0400",
+            "price": 422,
+            "currency": "USD",
+            "seatsMax": 385,
+            "seatsOcc": 374
+        },
+        {
+            "carrId": "JL",
+            "connId": "0408",
+            "price": 983,
+            "currency": "JPY",
+            "seatsMax": 290,
+            "seatsOcc": 43
+        },
+        {
+            "carrId": "AZ",
+            "connId": "0555",
+            "price": 220,
+            "currency": "EUR",
+            "seatsMax": 290,
+            "seatsOcc": 284
+        },
+        {
+            "carrId": "AZ",
+            "connId": "0791",
+            "price": 857,
+            "currency": "EUR",
+            "seatsMax": 360,
+            "seatsOcc": 198
+        },
+        {
+            "carrId": "LH",
+            "connId": "0454",
+            "price": 999,
+            "currency": "EUR",
+            "seatsMax": 270,
+            "seatsOcc": 154
+        },
+        {
+            "carrId": "JL",
+            "connId": "0407",
+            "price": 749,
+            "currency": "JPY",
+            "seatsMax": 290,
+            "seatsOcc": 12
+        },
+        {
+            "carrId": "AZ",
+            "connId": "0791",
+            "price": 609,
+            "currency": "EUR",
+            "seatsMax": 340,
+            "seatsOcc": 143
+        },
+        {
+            "carrId": "LH",
+            "connId": "0400",
+            "price": 422,
+            "currency": "USD",
+            "seatsMax": 385,
+            "seatsOcc": 374
+        },
+        {
+            "carrId": "JL",
+            "connId": "0408",
+            "price": 610,
+            "currency": "JPY",
+            "seatsMax": 280,
+            "seatsOcc": 280
+        },
+        {
+            "carrId": "LH",
+            "connId": "0454",
+            "price": 965,
+            "currency": "EUR",
+            "seatsMax": 290,
+            "seatsOcc": 209
+        }
+    ]
+}

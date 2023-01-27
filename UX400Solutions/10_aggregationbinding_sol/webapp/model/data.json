@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+            "carrId": "AA",
+            "connId": "0017",
+            "cityFrom": "New York",
+            "cityTo": "San Francisco"
+        },
+        {
+            "carrId": "AZ",
+            "connId": "0555",
+            "cityFrom": "Rom",
+            "cityTo": "Frankfurt"
+        },
+        {
+            "carrId": "DL",
+            "connId": "0106",
+            "cityFrom": "New York",
+            "cityTo": "Frankfurt"
+        },
+        {
+            "carrId": "JL",
+            "connId": "0407",
+            "cityFrom": "Tokyo",
+            "cityTo": "Frankfurt"
+        },
+        {
+            "carrId": "LH",
+            "connId": "0400",
+            "cityFrom": "Frankfurt",
+            "cityTo": "New York"
+        },
+        {
+            "carrId": "LH",
+            "connId": "2402",
+            "cityFrom": "Frankfurt",
+            "cityTo": "Berlin"
+        },
+        {
+            "carrId": "LH",
+            "connId": "3577",
+            "cityFrom": "Rom",
+            "cityTo": "Frankfurt"
+        },
+        {
+            "carrId": "QF",
+            "connId": "0005",
+            "cityFrom": "Singapur",
+            "cityTo": "Frankfurt"
+        },
+        {
+            "carrId": "SQ",
+            "connId": "0117",
+            "cityFrom": "Kuala Lumpur",
+            "cityTo": "Singapur"
+        },
+        {
+            "carrId": "UA",
+            "connId": "3516",
+            "cityFrom": "New York",
+            "cityTo": "Frankfurt"
+        }
+    ]
+}
