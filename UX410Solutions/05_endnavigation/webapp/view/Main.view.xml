@@ -1,0 +1,21 @@
+<mvc:View
+    controllerName="sap.training.endnavigation.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <layout:VerticalLayout>
+                            <Label id="idInfo" text="Hello world"/>
+                        </layout:VerticalLayout>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

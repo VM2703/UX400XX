@@ -1,0 +1,22 @@
+<mvc:View
+    controllerName="sap.training.startnavigation.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <VBox >
+                            <Link id="idNavLink" text="Navigate to Fiori-app with Link"/>
+                            <Button text="Navigate to Fiori-app using event handler" press="onPress"/>
+                        </VBox>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
