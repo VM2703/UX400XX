@@ -1,0 +1,32 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.f"
+	controllerName="student00.sap.training.dynamicpage.controller.Overview">
+	<f:DynamicPage id="dynamicPageOverviewId" headerExpanded="true" toggleHeaderOnTitleClick="true">
+		<f:content>
+			<Table items="{/UX_C_Carrier_TP}">
+				<headerToolbar>
+					<Toolbar>
+						<content>
+							<Title text="{i18n>overviewPageTitle}" level="H2"/>
+						</content>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column>
+						<Text text="{i18n>columnId}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>columnName}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem press="onPress" type="Navigation">
+						<cells>
+							<ObjectIdentifier title="{Carrid}"/>
+							<Text text="{Carrname}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</f:content>
+	</f:DynamicPage>
+</mvc:View>
