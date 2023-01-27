@@ -1,0 +1,8 @@
+<mvc:View controllerName="student00.sap.training.dynamicpage.controller.App" xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true" xmlns="sap.m" xmlns:f="sap.f">
+	<Shell id="shell">
+		<App id="app">
+			<f:FlexibleColumnLayout id="idFlexLayout" layout="{appView>/layout}" backgroundDesign="Translucent"/>
+		</App>
+	</Shell>
+</mvc:View>
