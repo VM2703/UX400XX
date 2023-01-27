@@ -1,0 +1,56 @@
+<mvc:View controllerName="student00.sap.training.valuehelp.controller.Main" xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true" xmlns="sap.m" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<f:DynamicPage id="idDynPage" headerExpanded="true" toggleHeaderOnTitleClick="true" 
+                    preserveHeaderStateOnScroll="true">
+                    <f:title>
+                        <f:DynamicPageTitle>
+                            <f:heading>
+                                <Input id="idCarInput" placeholder="Enter carrier id ..." showSuggestion="true" 
+                                    showValueHelp="true" suggestionItems="{/UX_C_Carrier_TP}" type="Text" 
+                                    valueHelpRequest="onValueHelpRequest" submit="onSubmit">
+                                    <suggestionItems>
+									    <core:Item text="{Carrid}"/>
+								    </suggestionItems>
+                                </Input>
+                            </f:heading>
+                        </f:DynamicPageTitle>
+                    </f:title>
+                    <f:header>
+                        <f:DynamicPageHeader pinnable="false">
+						    <f:content>
+							    <FlexBox alignItems="Start" justifyContent="SpaceBetween" 
+                                    id="idHeaderLayout" visible="false">
+								    <items>
+									    <Panel backgroundDesign="Transparent" 
+                                            class="sapUiNoContentPadding sapUiSmallMarginTop">
+										    <content>
+											    <layout:HorizontalLayout allowWrapping="true">
+												    <layout:VerticalLayout>
+													    <Title text="Airline"/>
+													    <ObjectAttribute title="Carrier" text="{Carrname}"/>
+													    <ObjectAttribute title="Carrier Id" text="{Carrid}"/>
+												    </layout:VerticalLayout>
+												    <layout:VerticalLayout class="sapUiMediumMarginBegin">
+													    <Title text="Airline details"/>
+													    <ObjectAttribute title="Currency" text="{Currcode}"/>
+													    <ObjectAttribute title="URL" text="{Url}"/>
+												    </layout:VerticalLayout>
+											    </layout:HorizontalLayout>
+										    </content>
+									    </Panel>
+								    </items>
+							    </FlexBox>
+						    </f:content>
+					    </f:DynamicPageHeader>
+                    </f:header>
+                    <f:content>
+					    <MessagePage showHeader="false" icon="sap-icon://search"/>
+				    </f:content>
+                </f:DynamicPage>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

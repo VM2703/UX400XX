@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		title="Carriers"
+		class="sapUiPopupWithPadding"
+		items="{/UX_C_Carrier_TP}"
+		search="onValueHelpSearch"
+		confirm="onValueHelpClose"
+		cancel="onValueHelpClose">
+		<StandardListItem
+			iconDensityAware="false"
+			iconInset="false"
+			title="{Carrid}"
+			description="{Carrname}"/>
+	</SelectDialog>
+</core:FragmentDefinition>
