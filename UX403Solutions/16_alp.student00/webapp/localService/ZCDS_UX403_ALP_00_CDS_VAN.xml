@@ -33,6 +33,38 @@
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
             <Annotations Target="ZCDS_UX403_ALP_00_CDS.ZCDS_UX403_ALP_00Type">
+                <Annotation Term="UI.Chart" Qualifier="ChartKPISalesByCustomer">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="Title" String="Sales by Customer"/>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>Customer</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="Customer"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>GrossAmount</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="GrossAmount"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.Chart" Qualifier="ChartVFSalesByCategory">
                     <Record Type="UI.ChartDefinitionType">
                         <PropertyValue Property="Title" String="Sales by Product Category"/>
@@ -102,6 +134,12 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="GrossAmount">
+                    <Record>
+                        <PropertyValue Property="Value" Path="GrossAmount"/>
+                        <PropertyValue Property="Title" String=""/>
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
@@ -123,6 +161,17 @@
                             <PropertyValue Property="Value" Path="GrossAmount"/>
                         </Record>
                     </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant" Qualifier="KPISalesByCustomer">
+                    <Record>
+                        <PropertyValue Property="Text" String="KPI: Sales by Customer"/>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.DataPoint#GrossAmount</AnnotationPath>
+                                <AnnotationPath>@UI.Chart#ChartKPISalesByCustomer</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
                 <Annotation Term="UI.PresentationVariant" Qualifier="VisualFilter">
                     <Record>
@@ -148,11 +197,23 @@
                         <PropertyPath>ProductCategory</PropertyPath>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.SelectionPresentationVariant" Qualifier="KPISalesByCustomer">
+                    <Record>
+                        <PropertyValue Property="Text" String=""/>
+                        <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#KPISalesByCustomer"/>
+                        <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#KPISalesByCustomer"/>
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.SelectionPresentationVariant" Qualifier="Default">
                     <Record>
                         <PropertyValue Property="Text" String=""/>
                         <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#Default"/>
                         <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#Default"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="KPISalesByCustomer">
+                    <Record>
+                        <PropertyValue Property="Text" String="KPI Sales by Customer"/>
                     </Record>
                 </Annotation>
                 <Annotation Term="UI.SelectionVariant" Qualifier="Default">

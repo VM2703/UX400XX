@@ -1,0 +1,57 @@
+<mvc:View controllerName="sap.training.diagram.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:suite="sap.suite.ui.commons"
+    xmlns:viz="sap.viz.ui5.controls">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <f:DynamicPage id="dynamicPageId" headerExpanded="true" toggleHeaderOnTitleClick="true">
+                    <f:title>
+                        <f:DynamicPageTitle>
+                            <f:heading>
+                                <Title text="{i18n>pageTitle}"/>
+                            </f:heading>
+                        </f:DynamicPageTitle>
+                    </f:title>
+                    <f:content>
+                        <suite:ChartContainer autoAdjustHeight="true" contentChange="onContentChange" id="idChartContainer" showFullScreen="true" showLegend="true"
+                        showPersonalization="false" title="{i18n>diagramTitle}">
+                            <suite:dimensionSelectors>
+                                <Select id="idDimSelector" visible="true" change="onChange"></Select>
+                            </suite:dimensionSelectors>
+                            <suite:content>
+                                <suite:ChartContainerContent icon="sap-icon://line-chart" title="{i18n>lineChartTitle}">
+                                    <suite:content>
+                                        <viz:Popover id="idLineChartPopover"></viz:Popover>
+                                        <viz:VizFrame id="idLineChartVizFrame" height="9.1em" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+                                    </suite:content>
+                                </suite:ChartContainerContent>
+                                <suite:ChartContainerContent icon="sap-icon://vertical-bar-chart" title="{i18n>barChartTitle}" >
+                                    <suite:content>
+                                        <viz:VizFrame id="idBarChartVizFrame" height="9.1rem" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+                                    </suite:content>
+                                </suite:ChartContainerContent>
+                                <suite:ChartContainerContent icon="sap-icon://table-chart" title="{i18n>tableTitle}" >
+                                    <suite:content>
+                                        <Table id="idTable">
+                                            <headerToolbar>
+                                                <OverflowToolbar>
+                                                    <content>
+                                                        <Title text="{i18n>tableheader}" level="H2"/>
+                                                    </content>
+                                                </OverflowToolbar>
+                                            </headerToolbar>
+                                        </Table>
+                                    </suite:content>
+                                </suite:ChartContainerContent>
+                            </suite:content>
+                        </suite:ChartContainer>
+                    </f:content>
+                </f:DynamicPage>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

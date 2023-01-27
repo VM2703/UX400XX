@@ -1,0 +1,91 @@
+[{
+	"__metadata": {
+		"type": "SalesFiguresService.SalesFiguresType",
+		"uri": "http://wdflbmt7215.wdf.sap.corp:8000/book/services/VerkaufszahlenService.xsodata/Verkaufszahlen('3857855824338571')"
+	},
+	"KEY": "3857855824338571",
+	"SUB_REGION_NAME": "Germany",
+	"REGION_NAME": "Europe",
+	"PRODUCT_NAME": "Jackets",
+	"SALES_AMOUNT": "65"
+}, {
+	"__metadata": {
+		"type": "SalesFiguresService.SalesFiguresType",
+		"uri": "http://wdflbmt7215.wdf.sap.corp:8000/book/services/VerkaufszahlenService.xsodata/Verkaufszahlen('3857855824338572')"
+	},
+	"KEY": "3857855824338572",
+	"SUB_REGION_NAME": "Germany",
+	"REGION_NAME": "Europe",
+	"PRODUCT_NAME": "Shirts",
+	"SALES_AMOUNT": "65"
+}, {
+	"__metadata": {
+		"type": "SalesFiguresService.SalesFiguresType",
+		"uri": "http://wdflbmt7215.wdf.sap.corp:8000/book/services/VerkaufszahlenService.xsodata/Verkaufszahlen('3857855824338573')"
+	},
+	"KEY": "3857855824338573",
+	"SUB_REGION_NAME": "India",
+	"REGION_NAME": "Asia",
+	"PRODUCT_NAME": "Trousers",
+	"SALES_AMOUNT": "85"
+}, {
+	"__metadata": {
+		"type": "SalesFiguresService.SalesFiguresType",
+		"uri": "http://wdflbmt7215.wdf.sap.corp:8000/book/services/VerkaufszahlenService.xsodata/Verkaufszahlen('3857855824338574')"
+	},
+	"KEY": "3857855824338574",
+	"SUB_REGION_NAME": "Japan",
+	"REGION_NAME": "Asia",
+	"PRODUCT_NAME": "Coats",
+	"SALES_AMOUNT": "75"
+}, {
+	"__metadata": {
+		"type": "SalesFiguresService.SalesFiguresType",
+		"uri": "http://wdflbmt7215.wdf.sap.corp:8000/book/services/VerkaufszahlenService.xsodata/Verkaufszahlen('3857855824338575')"
+	},
+	"KEY": "3857855824338575",
+	"SUB_REGION_NAME": "North-America",
+	"REGION_NAME": "Americas",
+	"PRODUCT_NAME": "Jackets",
+	"SALES_AMOUNT": "90"
+}, {
+	"__metadata": {
+		"type": "SalesFiguresService.SalesFiguresType",
+		"uri": "http://wdflbmt7215.wdf.sap.corp:8000/book/services/VerkaufszahlenService.xsodata/Verkaufszahlen('3857855824338576')"
+	},
+	"KEY": "3857855824338576",
+	"SUB_REGION_NAME": "North-America",
+	"REGION_NAME": "Americas",
+	"PRODUCT_NAME": "Purse",
+	"SALES_AMOUNT": "85"
+}, {
+	"__metadata": {
+		"type": "SalesFiguresService.SalesFiguresType",
+		"uri": "http://wdflbmt7215.wdf.sap.corp:8000/book/services/VerkaufszahlenService.xsodata/Verkaufszahlen('3857855824338577')"
+	},
+	"KEY": "3857855824338577",
+	"SUB_REGION_NAME": "North-America",
+	"REGION_NAME": "Americas",
+	"PRODUCT_NAME": "Shirts",
+	"SALES_AMOUNT": "100"
+}, {
+	"__metadata": {
+		"type": "SalesFiguresService.SalesFiguresType",
+		"uri": "http://wdflbmt7215.wdf.sap.corp:8000/book/services/VerkaufszahlenService.xsodata/Verkaufszahlen('3857855824338578')"
+	},
+	"KEY": "3857855824338578",
+	"SUB_REGION_NAME": "South-America",
+	"REGION_NAME": "Americas",
+	"PRODUCT_NAME": "Jackets",
+	"SALES_AMOUNT": "80"
+}, {
+	"__metadata": {
+		"type": "SalesFiguresService.SalesFiguresType",
+		"uri": "http://wdflbmt7215.wdf.sap.corp:8000/book/services/VerkaufszahlenService.xsodata/Verkaufszahlen('3857855824338579')"
+	},
+	"KEY": "3857855824338579",
+	"SUB_REGION_NAME": "South-America",
+	"REGION_NAME": "Americas",
+	"PRODUCT_NAME": "Shirts",
+	"SALES_AMOUNT": "75"
+}]
