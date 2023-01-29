@@ -1,0 +1,36 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:f="sap.f" xmlns:layout="sap.ui.layout"
+	controllerName="student00.sap.training.dynamicpage.controller.Carrier">
+	<f:DynamicPage id="dynamicPageCarrierId" headerExpanded="true" toggleHeaderOnTitleClick="true">
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="{Carrname}"/>
+				</f:heading>
+				<f:expandedContent>
+					<Text text="{Carrid}"/>
+				</f:expandedContent>
+				<f:snappedContent>
+					<Text text="{Carrid}"/>
+				</f:snappedContent>
+			</f:DynamicPageTitle>
+		</f:title>
+		<f:header>
+			<f:DynamicPageHeader pinnable="true">
+				<f:content>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<layout:HorizontalLayout allowWrapping="true">
+								<layout:VerticalLayout class="sapUiMediumMarginEnd">
+									<ObjectAttribute title="{i18n>currLabelText}" text="{Currcode}"/>
+									<ObjectAttribute title="{i18n>urlLabelText}" text="{Url}"/>
+								</layout:VerticalLayout>
+							</layout:HorizontalLayout>		
+						</items>
+					</FlexBox>
+				</f:content>
+			</f:DynamicPageHeader>
+		</f:header>
+	</f:DynamicPage>
+</mvc:View>
+
