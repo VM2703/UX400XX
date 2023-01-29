@@ -1,0 +1,41 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:layout="sap.ui.layout" xmlns:semantic="sap.f.semantic"
+	controllerName="student00.sap.training.dynamicpage.controller.Carrier">
+	<semantic:SemanticPage id="semanticPageCarrierId" headerExpanded="true" toggleHeaderOnTitleClick="true">
+		<semantic:titleHeading>
+			<Title text="{Carrname}"/>
+		</semantic:titleHeading>
+		<semantic:headerContent>
+			<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+			    <items>
+				    <layout:HorizontalLayout allowWrapping="true">
+					    <layout:VerticalLayout class="sapUiMediumMarginEnd">
+							<ObjectAttribute title="{i18n>currLabelText}" text="{Currcode}"/>
+							<ObjectAttribute title="{i18n>urlLabelText}" text="{Url}"/>
+						</layout:VerticalLayout>
+					</layout:HorizontalLayout>		
+				</items>
+			</FlexBox>
+		</semantic:headerContent>
+        <semantic:closeAction>
+			<semantic:CloseAction
+					id="idCloseAction"
+					press="onCloseDetailPress"/>
+		</semantic:closeAction>
+		<semantic:fullScreenAction>
+			<semantic:FullScreenAction
+					id="idEnterFullScreen"
+					visible="{= !${device>/system/phone} &amp;&amp; !${appView>/actionButtonsInfo/midColumn/fullScreen}}"
+					press="onToggleFullScreen"/>
+		</semantic:fullScreenAction>
+		<semantic:exitFullScreenAction>
+			<semantic:ExitFullScreenAction
+					id="idExitFullScreen"
+					visible="{= !${device>/system/phone} &amp;&amp; ${appView>/actionButtonsInfo/midColumn/fullScreen}}"
+					press="onToggleFullScreen"/>
+		</semantic:exitFullScreenAction>
+	</semantic:SemanticPage>
+</mvc:View>
+
+
+
