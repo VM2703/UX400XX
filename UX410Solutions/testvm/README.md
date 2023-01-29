@@ -1,25 +1,26 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Sun Jan 29 2023 18:35:01 GMT+0000 (Coordinated Universal Time)|
-|**App Generator**<br>@sap/generator-fiori-freestyle|
+|**Generation Date and Time**<br>Sun Jan 29 2023 17:02:50 GMT+0000 (Coordinated Universal Time)|
+|**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.8.5|
 |**Generation Platform**<br>SAP Business Application Studio|
-|**Template Used**<br>simple|
+|**Template Used**<br>List Report Page V2|
 |**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>http://d50-pripro:443/sap/opu/odata/sap/ZUX_TRAVEL_SRV
-|**Module Name**<br>dynamicpage|
-|**Application Title**<br>UX410 Flight App 00|
-|**Namespace**<br>student00.sap.training|
+|**Service URL**<br>http://d50-pripro:443/sap/opu/odata/sap/ZUX410_C_FLIGHTUI00_CDS
+|**Module Name**<br>testvm|
+|**Application Title**<br>Flight Test|
+|**Namespace**<br>sap.training|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>1.96.17|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
+|**Main Entity**<br>FlightSet00|
 
-## dynamicpage
+## testvm
 
-UX410 Flight App 00
+Flight Test
 
 ### Starting the generated app
 

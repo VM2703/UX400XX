@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://d50-pripro:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZUX410_C_FLIGHTUI00_CDS" xml:lang="de" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="Flight00" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="carrid"/>
+                    <PropertyRef Name="connid"/>
+                    <PropertyRef Name="fldate"/>
+                </Key>
+                <Property Name="carrid" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:label="Fluggesellschaft" sap:quickinfo="Kurzbezeichnung der Fluggesellschaft"/>
+                <Property Name="connid" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Verbindungs-Nummer" sap:quickinfo="Code der Einzelflugverbindung"/>
+                <Property Name="fldate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:label="Datum des Fluges" sap:quickinfo="Flugdatum"/>
+                <Property Name="carrname" Type="Edm.String" MaxLength="20" sap:label="Fluggesellschaft" sap:quickinfo="Name einer Fluggesellschaft"/>
+                <Property Name="cityfrom" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Abflugstadt"/>
+                <Property Name="cityto" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Ankunftstadt"/>
+                <Property Name="planetype" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Flugzeugtyp"/>
+                <Property Name="price" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Flugpreis"/>
+                <Property Name="Curr" Type="Edm.String" MaxLength="5" sap:label="Währ. d. Flugg." sap:quickinfo="Hauswährung der Fluggesellschaft" sap:semantics="currency-code"/>
+                <Property Name="Total" Type="Edm.Decimal" Precision="26" Scale="3" sap:unit="Curr"/>
+                <Property Name="seatsmax" Type="Edm.Int32" sap:label="Max. Belegung Eco." sap:quickinfo="Maximale Belegung Economy Class"/>
+                <Property Name="seatsocc" Type="Edm.Int32" sap:label="Belegung Eco." sap:quickinfo="Belegte Plätze Economy Class"/>
+                <Property Name="url" Type="Edm.String" MaxLength="255" sap:label="URL" sap:quickinfo="URL einer Fluggesellschaft"/>
+                <Property Name="paymentsum" Type="Edm.Decimal" Precision="18" Scale="3" sap:label="Akt. Buchungssumme" sap:quickinfo="Summe der bisherigen Buchungseinnahmen"/>
+                <Property Name="seatsmax_b" Type="Edm.Int32" sap:label="Max. Belegung Bus." sap:quickinfo="Maximale Belegung Business Class"/>
+                <Property Name="seatsocc_b" Type="Edm.Int32" sap:label="Belegung Bus." sap:quickinfo="Belegte Plätze Business Class"/>
+                <Property Name="seatsmax_f" Type="Edm.Int32" sap:label="Max. Belegung 1st." sap:quickinfo="Maximale Belegung First Class"/>
+                <Property Name="seatsocc_f" Type="Edm.Int32" sap:label="Belegung 1st." sap:quickinfo="Belegte Plätze First Class"/>
+            </EntityType>
+            <EntityContainer Name="ZUX410_C_FLIGHTUI00_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="FlightSet00" EntityType="ZUX410_C_FLIGHTUI00_CDS.Flight00" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotations Target="ZUX410_C_FLIGHTUI00_CDS.ZUX410_C_FLIGHTUI00_CDS_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <atom:link rel="self" href="https://d50-pripro:443/sap/opu/odata/sap/ZUX410_C_FLIGHTUI00_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://d50-pripro:443/sap/opu/odata/sap/ZUX410_C_FLIGHTUI00_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

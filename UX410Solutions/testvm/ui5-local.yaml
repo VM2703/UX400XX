@@ -2,7 +2,7 @@
 
 specVersion: "2.5"
 metadata:
-  name: student00.sap.training.dynamicpage
+  name: sap.training.testvm
 type: application
 framework:
   name: SAPUI5
@@ -10,12 +10,11 @@ framework:
   libraries:
     - name: sap.m
     - name: sap.ui.core
+    - name: sap.ushell
     - name: sap.f
-    - name: sap.suite.ui.generic.template
     - name: sap.ui.comp
     - name: sap.ui.generic.app
-    - name: sap.ui.table
-    - name: sap.ushell
+    - name: sap.suite.ui.generic.template
     - name: themelib_sap_fiori_3
 server:
   customMiddleware:
@@ -39,7 +38,7 @@ server:
       configuration:
         mountPath: /
         services:
-          - urlPath: /sap/opu/odata/sap/ZUX_TRAVEL_SRV
+          - urlPath: /sap/opu/odata/sap/ZUX410_C_FLIGHTUI00_CDS
             metadataPath: ./webapp/localService/metadata.xml
             mockdataPath: ./webapp/localService/data
             generateMockData: true
@@ -47,5 +46,5 @@ server:
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
-        component: student00.sap.training.dynamicpage
+        component: sap.training.testvm
         ui5Theme: sap_fiori_3

@@ -2,7 +2,7 @@
 
 specVersion: "2.5"
 metadata:
-  name: student00.sap.training.dynamicpage
+  name: sap.training.testvm
 type: application
 server:
   customMiddleware:
@@ -29,5 +29,5 @@ server:
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
-        component: student00.sap.training.dynamicpage
+        component: sap.training.testvm
         ui5Theme: sap_fiori_3
