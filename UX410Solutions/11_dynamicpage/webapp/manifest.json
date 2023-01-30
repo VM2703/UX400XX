@@ -43,7 +43,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": false,
+    "flexEnabled": true,
     "rootView": {
       "viewName": "student00.sap.training.dynamicpage.view.App",
       "type": "XML",
@@ -115,6 +115,7 @@
         "Overview": {
 			"viewType": "XML",
 			"viewName": "Overview",
+      "viewId": "overview",
 			"viewLevel": 1
 		},
 		"NotFound": {
@@ -126,6 +127,7 @@
 			"viewType": "XML",
 			"viewName": "Carrier",
             "viewLevel": 2,
+            "viewId": "carrier",
             "controlAggregation": "midColumnPages"
 		}
       }
