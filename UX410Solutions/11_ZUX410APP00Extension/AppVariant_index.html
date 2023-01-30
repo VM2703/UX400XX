@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Adaptation Project Preview</title>
+
+	<style>
+		/* hide variant management popover footer */
+		.sapUiFlVarMngmtPopover .sapMPageWithFooter>section { bottom: 0 !important; }
+		.sapUiFlVarMngmtPopover .sapMPageFooter, .sapUICompVarMngmtPopover .sapMPageFooter { display: none !important; }
+	</style>
+	
+	<script type="text/javascript">
+		window["sap-ushell-config"] = {
+			defaultRenderer : "fiori2",
+			renderers: {
+				fiori2: {
+					componentData: {
+						config: {
+							appState: "headerless",
+							rootIntent: "adaptationproject-display"
+						}
+					}
+				}
+			},
+			applications: {
+				"adaptationproject-display": {
+					title: "Adaptation Project Preview",
+					additionalInformation: "SAPUI5.Component=student00.sap.training.dynamicpage",
+					applicationType: "URL",
+					applicationDependencies: {"name":"student00.sap.training.dynamicpage","url":"/sap/bc/ui5_ui5/sap/zux410_app00/~FE0A13814C919EA5B64B4473B8ED1095~5","manifest":{"_version":"1.37.0","sap.app":{"id":"customer.ZUX410APP00Extension","type":"application","i18n":"i18n/i18n.properties","applicationVersion":{"version":"0.0.1"},"title":"Extension App 00","description":"A simple dynamic page app","resources":"resources.json","sourceTemplate":{"id":"@sap/generator-fiori:basic","version":"1.8.5","toolsId":"ce618e8d-f92f-4e28-b6d2-425543b9615a"},"dataSources":{"mainService":{"uri":"/sap/opu/odata/sap/ZUX_TRAVEL_SRV/","type":"OData","settings":{"odataVersion":"2.0","localUri":"localService/metadata.xml"}}}},"sap.ui":{"technology":"UI5","icons":{"icon":"","favIcon":"","phone":"","phone@2":"","tablet":"","tablet@2":""},"deviceTypes":{"desktop":true,"tablet":true,"phone":true}},"sap.ui5":{"flexEnabled":true,"rootView":{"viewName":"student00.sap.training.dynamicpage.view.App","type":"XML","async":true,"id":"App"},"dependencies":{"minUI5Version":"1.96.17","libs":{"sap.ui.core":{},"sap.m":{},"sap.ui.layout":{}}},"contentDensities":{"compact":true,"cozy":true},"models":{"i18n":{"type":"sap.ui.model.resource.ResourceModel","settings":{"bundleName":"student00.sap.training.dynamicpage.i18n.i18n","enhanceWith":[{"bundleUrl":"i18n/i18n.properties","supportedLocales":[""],"fallbackLocale":"","bundleUrlRelativeTo":"manifest"}]}},"":{"dataSource":"mainService","preload":true,"settings":{"defaultBindingMode":"TwoWay","defaultCountMode":"Inline","refreshAfterChange":false}}},"resources":{"css":[{"uri":"css/style.css"}]},"routing":{"config":{"routerClass":"sap.m.routing.Router","viewType":"XML","async":true,"viewPath":"student00.sap.training.dynamicpage.view","controlAggregation":"beginColumnPages","controlId":"idFlexLayout","clearControlAggregation":true},"routes":[{"name":"Overview","pattern":"","titleTarget":"","greedy":false,"target":["Overview"]},{"name":"Carrier","pattern":"carriers/{carrierId}","titleTarget":"","greedy":false,"target":["Carrier"]}],"targets":{"Overview":{"viewType":"XML","viewName":"Overview","viewId":"overview","viewLevel":1},"NotFound":{"viewType":"XML","viewName":"NotFound","controlAggregation":"midColumnPages"},"Carrier":{"viewType":"XML","viewName":"Carrier","viewLevel":2,"viewId":"carrier","controlAggregation":"midColumnPages"}}},"componentName":"student00.sap.training.dynamicpage","appVariantId":"customer.ZUX410APP00Extension","appVariantIdHierarchy":[{"appVariantId":"student00.sap.training.dynamicpage.Component","layer":"VENDOR","version":"0.0.1"}],"flexExtensionPointEnabled":true},"sap.platform.abap":{"uri":"/sap/bc/ui5_ui5/sap/zux410_app00"}},"self":{"name":"student00.sap.training.dynamicpage","url":"/sap/bc/ui5_ui5/sap/zux410_app00/~FE0A13814C919EA5B64B4473B8ED1095~5"},"asyncHints":{"libs":[{"name":"sap.ui.layout"},{"name":"sap.m"},{"name":"sap.ui.core"}],"components":[{"name":"customer.ZUX410APP00Extension","url":{"url":"/webapp","final":true},"lazy":true}],"requests":[{"name":"sap.ui.fl.changes","reference":"customer.ZUX410APP00Extension","preview":{"maxLayer":"PARTNER","reference":"student00.sap.training.dynamicpage.Component"}}]},"altManifestUrl":"webapp/manifest.appdescr_variant","componentData":{"startupParameters":{"sap-ui-fl-max-layer":["CUSTOMER_BASE"]}}}
+				}
+			}
+		};
+	</script>
+
+	<script src="../../1.96.17/test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script>
+
+	<script id="sap-ui-bootstrap"
+			src="../../1.96.17/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.ushell, sap.ui.rta"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-xx-rootComponentNode="content"
+			data-sap-ui-xx-designMode="true"
+			data-sap-ui-flexibilityServices='[{"connector": "LrepConnector", "layers": [], "url": "/sap/bc/lrep"},{"applyConnector": "WorkspaceApplyConnector", "writeConnector": "WorkspaceWriteConnector", "custom": true, "layers": ["CUSTOMER_BASE"]}]'
+			data-sap-ui-xx-suppressDeactivationOfControllerCode="true">
+	</script>
+
+	<script type="text/javascript">
+		sap.ui.getCore().attachInit(function() {
+			sap.ushell.Container.createRenderer().placeAt("content");
+		});
+	</script>
+
+	<script src="https://port8888-workspaces-ws-v96w6.eu20.applicationstudio.cloud.sap/watt/resources/sap/watt/lib/lodash/lodash.js" type="text/javascript"></script>
+	<script src="https://port8888-workspaces-ws-v96w6.eu20.applicationstudio.cloud.sap/features/SAP.ui5-visual-editor-vscode/1.0.96/sap.watt.saptoolsets.fiori.project.uiadaptationfeature/client/v1.0.96_1674734653539/src/uiadaptation/util/UIAdaptationTransceiver.js" type="text/javascript"></script>
+	<script src="https://port8888-workspaces-ws-v96w6.eu20.applicationstudio.cloud.sap/features/SAP.ui5-visual-editor-vscode/1.0.96/sap.watt.saptoolsets.fiori.project.uiadaptationfeature/client/v1.0.96_1674734653539/src/uiadaptation/util/AppVariantPreviewHelper.js" type="text/javascript"></script>
+
+</head>
+
+<body class="sapUiBody" id="content" role="application">
+</body>
+
+</html>

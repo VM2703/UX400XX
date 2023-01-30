@@ -1,0 +1,38 @@
+{
+	"fileName": "id_1675076431790_46_addXMLAtExtensionPoint",
+	"fileType": "change",
+	"changeType": "addXMLAtExtensionPoint",
+	"moduleName": "customer/ZUX410APP00Extension/changes/fragments/myextension.fragment.xml",
+	"reference": "customer.ZUX410APP00Extension",
+	"packageName": "$TMP",
+	"content": {
+		"fragmentPath": "fragments/myextension.fragment.xml"
+	},
+	"selector": {
+		"name": "ux410_extension",
+		"viewSelector": {
+			"id": "carrier",
+			"idIsLocal": true
+		}
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/customer.ZUX410APP00Extension/changes/",
+	"projectId": "customer.ZUX410APP00Extension",
+	"creation": "2023-01-30T11:00:31.818Z",
+	"originalLanguage": "DE",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.96.16",
+		"sourceChangeFileName": "",
+		"compositeCommand": "id_1675076431790_47_composite",
+		"command": "addXMLAtExtensionPoint"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

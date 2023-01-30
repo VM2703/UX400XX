@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1675076289095_45_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "customer.ZUX410APP00Extension",
+	"packageName": "$TMP",
+	"content": {
+		"property": "visible",
+		"newValue": false
+	},
+	"selector": {
+		"id": "carrier--idCarrierDetails",
+		"type": "sap.m.FlexBox",
+		"idIsLocal": true
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/student00.sap.training.dynamicpage/changes/",
+	"projectId": "customer.ZUX410APP00Extension",
+	"creation": "2023-01-30T10:58:09.682Z",
+	"originalLanguage": "DE",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.96.16",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "property"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}
