@@ -32,9 +32,40 @@
         <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
     </edmx:Reference>
     <edmx:DataServices m:DataServiceVersion="2.0">
-        <Schema Namespace="ZUX410_C_FLIGHTUI00_CDS" xml:lang="de" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <Schema Namespace="ZUX410_C_FLIGHTUI01_CDS" xml:lang="de" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
             <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
-            <EntityType Name="Flight00" sap:content-version="1">
+            <EntityType Name="ZUX410_C_BOOKINGUI00Type" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="carrid"/>
+                    <PropertyRef Name="connid"/>
+                    <PropertyRef Name="fldate"/>
+                    <PropertyRef Name="bookid"/>
+                </Key>
+                <Property Name="carrid" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:label="Fluggesellschaft" sap:quickinfo="Kurzbezeichnung der Fluggesellschaft"/>
+                <Property Name="connid" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Verbindungs-Nummer" sap:quickinfo="Code der Einzelflugverbindung"/>
+                <Property Name="fldate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:label="Datum des Fluges" sap:quickinfo="Flugdatum"/>
+                <Property Name="bookid" Type="Edm.String" Nullable="false" MaxLength="8" sap:display-format="NonNegative" sap:label="Buchungsnummer"/>
+                <Property Name="customid" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Kundennummer" sap:quickinfo="Flugkundennummer"/>
+                <Property Name="custtype" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="G/P-Kunde" sap:quickinfo="Kundentyp"/>
+                <Property Name="smoker" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Raucher" sap:quickinfo="Raucherplatz"/>
+                <Property Name="luggweight" Type="Edm.Decimal" Precision="8" Scale="4" sap:label="Gepäckgewicht" sap:quickinfo="Gewicht des Fluggepäcks"/>
+                <Property Name="wunit" Type="Edm.String" MaxLength="3" sap:label="Maßeinheit" sap:quickinfo="Gewichtseinheit" sap:semantics="unit-of-measure"/>
+                <Property Name="invoice" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Rechnungsstellung"/>
+                <Property Name="class" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Flugklasse"/>
+                <Property Name="forcuram" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Betrag" sap:quickinfo="Preis der Buchung in Fremdwährung (abhängig vom Buch.-Ort)"/>
+                <Property Name="forcurkey" Type="Edm.String" MaxLength="5" sap:label="Zahl.Währung" sap:quickinfo="Zahlungswährung" sap:semantics="currency-code"/>
+                <Property Name="loccuram" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Betrag (Hauswährung)" sap:quickinfo="Preis der Buchung in Hauswährung der Fluggesellschaft"/>
+                <Property Name="loccurkey" Type="Edm.String" MaxLength="5" sap:label="Währ. d. Flugg." sap:quickinfo="Hauswährung der Fluggesellschaft" sap:semantics="currency-code"/>
+                <Property Name="order_date" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Buchungsdatum"/>
+                <Property Name="counter" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Verkaufsstelle" sap:quickinfo="Nummer der Verkaufsstelle"/>
+                <Property Name="agencynum" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Reisebüronr." sap:quickinfo="Nummer des Reisebüros"/>
+                <Property Name="cancelled" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Stornokennzeichen" sap:quickinfo="Stornierungskennzeichen"/>
+                <Property Name="reserved" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="reserviert" sap:quickinfo="Reservierungskennzeichen"/>
+                <Property Name="passname" Type="Edm.String" MaxLength="25" sap:label="Passagiername" sap:quickinfo="Name des Passagiers"/>
+                <Property Name="passform" Type="Edm.String" MaxLength="15" sap:label="Anrede"/>
+                <Property Name="passbirth" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Pass. Geburtsdatum" sap:quickinfo="Geburtsdatum eines Passagiers"/>
+            </EntityType>
+            <EntityType Name="ZUX410_C_FLIGHTUI01Type" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="carrid"/>
                     <PropertyRef Name="connid"/>
@@ -58,15 +89,25 @@
                 <Property Name="seatsocc_b" Type="Edm.Int32" sap:label="Belegung Bus." sap:quickinfo="Belegte Plätze Business Class"/>
                 <Property Name="seatsmax_f" Type="Edm.Int32" sap:label="Max. Belegung 1st." sap:quickinfo="Maximale Belegung First Class"/>
                 <Property Name="seatsocc_f" Type="Edm.Int32" sap:label="Belegung 1st." sap:quickinfo="Belegte Plätze First Class"/>
+                <NavigationProperty Name="to_Bookings" Relationship="ZUX410_C_FLIGHTUI01_CDS.assoc_4F0BAEA7DB3720DA6934347941EA37AA" FromRole="FromRole_assoc_4F0BAEA7DB3720DA6934347941EA37AA" ToRole="ToRole_assoc_4F0BAEA7DB3720DA6934347941EA37AA"/>
             </EntityType>
-            <EntityContainer Name="ZUX410_C_FLIGHTUI00_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
-                <EntitySet Name="FlightSet00" EntityType="ZUX410_C_FLIGHTUI00_CDS.Flight00" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+            <Association Name="assoc_4F0BAEA7DB3720DA6934347941EA37AA" sap:content-version="1">
+                <End Type="ZUX410_C_FLIGHTUI01_CDS.ZUX410_C_FLIGHTUI01Type" Multiplicity="1" Role="FromRole_assoc_4F0BAEA7DB3720DA6934347941EA37AA"/>
+                <End Type="ZUX410_C_FLIGHTUI01_CDS.ZUX410_C_BOOKINGUI00Type" Multiplicity="*" Role="ToRole_assoc_4F0BAEA7DB3720DA6934347941EA37AA"/>
+            </Association>
+            <EntityContainer Name="ZUX410_C_FLIGHTUI01_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZUX410_C_BOOKINGUI00" EntityType="ZUX410_C_FLIGHTUI01_CDS.ZUX410_C_BOOKINGUI00Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZUX410_C_FLIGHTUI01" EntityType="ZUX410_C_FLIGHTUI01_CDS.ZUX410_C_FLIGHTUI01Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <AssociationSet Name="assoc_4F0BAEA7DB3720DA6934347941EA37AA" Association="ZUX410_C_FLIGHTUI01_CDS.assoc_4F0BAEA7DB3720DA6934347941EA37AA" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZUX410_C_FLIGHTUI01" Role="FromRole_assoc_4F0BAEA7DB3720DA6934347941EA37AA"/>
+                    <End EntitySet="ZUX410_C_BOOKINGUI00" Role="ToRole_assoc_4F0BAEA7DB3720DA6934347941EA37AA"/>
+                </AssociationSet>
             </EntityContainer>
-            <Annotations Target="ZUX410_C_FLIGHTUI00_CDS.ZUX410_C_FLIGHTUI00_CDS_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="ZUX410_C_FLIGHTUI01_CDS.ZUX410_C_FLIGHTUI01_CDS_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
             </Annotations>
-            <atom:link rel="self" href="https://d50-pripro:443/sap/opu/odata/sap/ZUX410_C_FLIGHTUI00_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
-            <atom:link rel="latest-version" href="https://d50-pripro:443/sap/opu/odata/sap/ZUX410_C_FLIGHTUI00_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="self" href="https://d50-pripro:443/sap/opu/odata/sap/ZUX410_C_FLIGHTUI01_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://d50-pripro:443/sap/opu/odata/sap/ZUX410_C_FLIGHTUI01_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

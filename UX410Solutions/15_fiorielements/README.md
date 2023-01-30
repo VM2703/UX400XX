@@ -1,26 +1,27 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Mon Jan 30 2023 11:54:02 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Mon Jan 30 2023 13:04:50 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.8.5|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V2|
 |**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>http://d50-pripro:443/sap/opu/odata/sap/ZUX410_C_FLIGHTUI00_CDS
+|**Service URL**<br>http://d50-pripro:443/sap/opu/odata/sap/ZUX410_C_FLIGHTUI01_CDS
 |**Module Name**<br>fiorielements|
-|**Application Title**<br>Flight Exercise|
+|**Application Title**<br>FlightExercise 15|
 |**Namespace**<br>student00.sap.training|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>1.96.17|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
-|**Main Entity**<br>FlightSet00|
+|**Main Entity**<br>ZUX410_C_FLIGHTUI01|
+|**Navigation Entity**<br>to_Bookings|
 
 ## fiorielements
 
-Flight Exercise.
+FlightExercise 15
 
 ### Starting the generated app
 

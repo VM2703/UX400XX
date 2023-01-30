@@ -8,8 +8,8 @@
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
         <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
     </edmx:Reference>
-    <edmx:Reference Uri="/sap/opu/odata/sap/ZUX410_C_FLIGHTUI00_CDS/$metadata">
-        <edmx:Include Namespace="ZUX410_C_FLIGHTUI00_CDS" Alias="SAP"/>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZUX410_C_FLIGHTUI01_CDS/$metadata">
+        <edmx:Include Namespace="ZUX410_C_FLIGHTUI01_CDS"/>
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">

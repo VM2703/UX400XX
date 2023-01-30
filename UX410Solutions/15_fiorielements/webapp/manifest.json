@@ -13,22 +13,23 @@
         "sourceTemplate": {
             "id": "@sap/generator-fiori:lrop",
             "version": "1.8.5",
-            "toolsId": "1686c3a5-b6b2-4dd0-8a74-01b930428a49"
+            "toolsId": "62d227b0-d878-4031-a9e6-2cff4bb7d7b0"
         },
         "dataSources": {
             "mainService": {
-                "uri": "/sap/opu/odata/sap/ZUX410_C_FLIGHTUI00_CDS/",
+                "uri": "/sap/opu/odata/sap/ZUX410_C_FLIGHTUI01_CDS/",
                 "type": "OData",
                 "settings": {
                     "odataVersion": "2.0",
                     "annotations": [
+                        "mainService_Annotation",
                         "ZUX410_C_FLIGHTUI00_CDS_VAN"
                     ],
                     "localUri": "localService/metadata.xml"
                 }
             },
             "ZUX410_C_FLIGHTUI00_CDS_VAN": {
-                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZUX410_C_FLIGHTUI00_CDS_VAN',Version='0001')/$value/",
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZUX410_C_FLIGHTUI01_CDS_VAN',Version='0001')/$value/",
                 "type": "ODataAnnotation",
                 "settings": {
                     "localUri": "localService/ZUX410_C_FLIGHTUI00_CDS_VAN.xml"
@@ -39,6 +40,13 @@
                 "uri": "annotations/annotation.xml",
                 "settings": {
                     "localUri": "annotations/annotation.xml"
+                }
+            },
+            "mainService_Annotation": {
+                "uri": "/destinations/D50_200/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZUX410_C_FLIGHTUI01_CDS_VAN',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/mainService_Annotation.xml"
                 }
             }
         }
@@ -116,8 +124,8 @@
             "showDraftToggle": false
         },
         "pages": {
-            "ListReport|FlightSet00": {
-                "entitySet": "FlightSet00",
+            "ListReport|ZUX410_C_FLIGHTUI01": {
+                "entitySet": "ZUX410_C_FLIGHTUI01",
                 "component": {
                     "name": "sap.suite.ui.generic.template.ListReport",
                     "list": true,
@@ -133,11 +141,21 @@
                     }
                 },
                 "pages": {
-                    "ObjectPage|FlightSet00": {
-                        "entitySet": "FlightSet00",
+                    "ObjectPage|ZUX410_C_FLIGHTUI01": {
+                        "entitySet": "ZUX410_C_FLIGHTUI01",
                         "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
                         "component": {
                             "name": "sap.suite.ui.generic.template.ObjectPage"
+                        },
+                        "pages": {
+                            "ObjectPage|to_Bookings": {
+                                "navigationProperty": "to_Bookings",
+                                "entitySet": "ZUX410_C_BOOKINGUI00",
+                                "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                                "component": {
+                                    "name": "sap.suite.ui.generic.template.ObjectPage"
+                                }
+                            }
                         }
                     }
                 }

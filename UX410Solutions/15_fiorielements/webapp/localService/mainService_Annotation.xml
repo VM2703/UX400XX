@@ -21,22 +21,36 @@
     <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='')/$value">
         <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
     </edmx:Reference>
-    <edmx:Reference Uri="../../../sap/zux410_c_flightui00_cds/$metadata">
-        <edmx:Include Namespace="ZUX410_C_FLIGHTUI00_CDS" Alias="SAP"/>
+    <edmx:Reference Uri="../../../sap/zux410_c_flightui01_cds/$metadata">
+        <edmx:Include Namespace="ZUX410_C_FLIGHTUI01_CDS" Alias="SAP"/>
     </edmx:Reference>
     <edmx:DataServices>
-        <Schema Namespace="zux410_c_flightui00_cds_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-            <Annotations Target="ZUX410_C_FLIGHTUI00_CDS.Flight00">
-                <Annotation Term="UI.HeaderFacets">
+        <Schema Namespace="zux410_c_flightui01_cds_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="ZUX410_C_FLIGHTUI01_CDS.ZUX410_C_BOOKINGUI00Type">
+                <Annotation Term="UI.LineItem">
                     <Collection>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#flightinfo"/>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="passname"/>
                         </Record>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#seatinfo"/>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="fldate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="order_date"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="loccuram"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="class"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="smoker"/>
                         </Record>
                     </Collection>
                 </Annotation>
+            </Annotations>
+            <Annotations Target="ZUX410_C_FLIGHTUI01_CDS.ZUX410_C_FLIGHTUI01Type">
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.CollectionFacet">
@@ -71,6 +85,24 @@
                                     </Record>
                                 </Collection>
                             </PropertyValue>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Bookings"/>
+                            <PropertyValue Property="ID" String="bookings"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_Bookings/@UI.LineItem"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#flightinfo"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#seatinfo"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_Bookings/@UI.LineItem"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -110,10 +142,10 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="seatsocc_b"/>
+                                    <PropertyValue Property="Value" Path="seatsocc_f"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="seatsocc_f"/>
+                                    <PropertyValue Property="Value" Path="seatsocc_b"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
