@@ -8,15 +8,6 @@ sap.ui.define([
 		"use strict";
 
 		return Controller.extend("student00.sap.training.dynamicpage.controller.Carrier", {
-            metadata : {
-                methods: {
-                    onShowCarrierData: {
-                        public:true,
-                        final:false                    
-                    }
-                }                
-            },
-
 			onInit: function () {
                 var oRouter = this.getRouter();
 			    oRouter.getRoute("Carrier").attachMatched(this._onObjectMatched, this);
@@ -24,10 +15,6 @@ sap.ui.define([
             
             getRouter: function () {
 			    return sap.ui.core.UIComponent.getRouterFor(this);
-            },
-
-            onShowCarrierData : function(){
-                alert("You are currently view the data from carrier " + this.getView().getBindingContext().getProperty("Carrname"));
             },
             
             _onObjectMatched: function (oEvent) {

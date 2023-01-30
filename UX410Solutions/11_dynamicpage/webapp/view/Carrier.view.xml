@@ -12,7 +12,7 @@
 					<Title text="{Carrname}"/>
 				</uxap:snappedHeading>
 				<uxap:expandedContent>
-					<FlexBox alignItems="Start" justifyContent="SpaceBetween" id="idCarrierDetails">
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
 						<items>
 							<layout:HorizontalLayout allowWrapping="true">
 								<layout:VerticalLayout class="sapUiMediumMarginEnd">
@@ -22,8 +22,6 @@
 							</layout:HorizontalLayout>
 						</items>
 					</FlexBox>
-                    <core:ExtensionPoint name="ux410_extension"/>
-                    <Button text="{i18n>txtCarrierData}" press="onShowCarrierData"/>
 				</uxap:expandedContent>
 				<uxap:navigationActions>
 					<OverflowToolbarButton type="Transparent" icon="sap-icon://full-screen" 

@@ -3,6 +3,7 @@ sap.ui.define([
 ], function (Opa5) {
 	"use strict";
 	var sViewName = "App";
+	
 	Opa5.createPageObjects({
 		onTheAppPage: {
 

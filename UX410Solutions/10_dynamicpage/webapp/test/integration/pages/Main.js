@@ -2,18 +2,18 @@ sap.ui.define([
 	"sap/ui/test/Opa5"
 ], function (Opa5) {
 	"use strict";
-	var sViewName = "App";
+	var sViewName = "Main";
 	
 	Opa5.createPageObjects({
-		onTheAppPage: {
+		onTheViewPage: {
 
 			actions: {},
 
 			assertions: {
 
-				iShouldSeeTheApp: function () {
+				iShouldSeeThePageView: function () {
 					return this.waitFor({
-						id: "app",
+						id: "page",
 						viewName: sViewName,
 						success: function () {
 							Opa5.assert.ok(true, "The " + sViewName + " view is displayed");

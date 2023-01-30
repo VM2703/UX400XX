@@ -1,22 +1,30 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
 specVersion: "2.5"
 metadata:
-  name: student00.sap.training.dynamcpage2
+  name: student00.sap.training.dynamicpage
 type: application
 framework:
   name: SAPUI5
-  version: 1.96.0
+  version: 1.96.17
   libraries:
     - name: sap.m
-    - name: sap.ushell
+    - name: sap.ui.core
     - name: sap.f
     - name: sap.suite.ui.generic.template
     - name: sap.ui.comp
-    - name: sap.ui.core
     - name: sap.ui.generic.app
     - name: sap.ui.table
+    - name: sap.ushell
     - name: themelib_sap_fiori_3
 server:
   customMiddleware:
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:
@@ -26,13 +34,18 @@ server:
             url: http://d50-pripro:443
             client: '200'
             destination: D50_200
-    - name: fiori-tools-appreload
-      afterMiddleware: compression
+    - name: sap-fe-mockserver
+      beforeMiddleware: csp
       configuration:
-        port: 35729
-        path: webapp
-        delay: 300
+        mountPath: /
+        services:
+          - urlPath: /sap/opu/odata/sap/ZUX_TRAVEL_SRV
+            metadataPath: ./webapp/localService/metadata.xml
+            mockdataPath: ./webapp/localService/data
+            generateMockData: true
+        annotations: []
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
-        component: student00.sap.training.dynamcpage2
+        component: student00.sap.training.dynamicpage
+        ui5Theme: sap_fiori_3

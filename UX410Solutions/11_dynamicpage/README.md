@@ -1,25 +1,25 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Wed Nov 24 2021 08:17:49 GMT+0000 (Coordinated Universal Time)|
-|**App Generator**<br>@sap/generator-fiori|
-|**App Generator Version**<br>1.4.1|
+|**Generation Date and Time**<br>Mon Jan 30 2023 08:31:32 GMT+0000 (Coordinated Universal Time)|
+|**App Generator**<br>@sap/generator-fiori-freestyle|
+|**App Generator Version**<br>1.8.5|
 |**Generation Platform**<br>SAP Business Application Studio|
-|**Floorplan Used**<br>simple|
+|**Template Used**<br>simple|
 |**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>http://s4d.virtual:8000/sap/opu/odata/sap/UX_TRAVEL_SRV
-|**Module Name**<br>dynamcpage2|
-|**Application Title**<br>App Title|
+|**Service URL**<br>http://d50-pripro:443/sap/opu/odata/sap/ZUX_TRAVEL_SRV
+|**Module Name**<br>dynamicpage|
+|**Application Title**<br>UX410 Flight App 00|
 |**Namespace**<br>student00.sap.training|
 |**UI5 Theme**<br>sap_fiori_3|
-|**UI5 Version**<br>Latest|
+|**UI5 Version**<br>1.96.17|
 |**Enable Code Assist Libraries**<br>False|
+|**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
-|**Enable Telemetry**<br>True|
 
-## dynamcpage2
+## dynamicpage
 
-A Fiori application.
+UX410 Flight App 00.
 
 ### Starting the generated app
 
@@ -27,6 +27,12 @@ A Fiori application.
 
 ```
     npm start
+```
+
+- It is also possible to run the application using mock data that reflects the OData Service URL supplied during application generation.  In order to run the application with Mock Data, run the following from the generated app root folder:
+
+```
+    npm run start-mock
 ```
 
 #### Pre-requisites:

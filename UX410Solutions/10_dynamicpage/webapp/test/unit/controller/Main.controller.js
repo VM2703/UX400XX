@@ -1,13 +1,13 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"student00/sap/training/dynamicpage/controller/App.controller"
+	"student00saptraining/dynamicpage/controller/Main.controller"
 ], function (Controller) {
 	"use strict";
 
-	QUnit.module("App Controller");
+	QUnit.module("Main Controller");
 
-	QUnit.test("I should test the App controller", function (assert) {
+	QUnit.test("I should test the Main controller", function (assert) {
 		var oAppController = new Controller();
 		oAppController.onInit();
 		assert.ok(oAppController);

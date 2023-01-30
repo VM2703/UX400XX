@@ -1,5 +1,5 @@
 sap.ui.define([
-	"student00/sap/training/dynamicpage/test/unit/controller/App.controller"
+	"student00saptraining/dynamicpage/test/unit/controller/Main.controller"
 ], function () {
 	"use strict";
 });

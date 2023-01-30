@@ -1,6 +1,8 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
 specVersion: "2.5"
 metadata:
-  name: student00.sap.training.dynamcpage2
+  name: student00.sap.training.dynamicpage
 type: application
 server:
   customMiddleware:
@@ -8,16 +10,16 @@ server:
       afterMiddleware: compression
       configuration:
         ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
-        backend:
-          - path: /sap
-            url: http://d50-pripro:443
-            destination: D50_200
         ui5:
           path:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
-          version: '' # The UI5 version, for instance, 1.78.1. Empty string means latest version
+        backend:
+          - path: /sap
+            url: http://d50-pripro:443
+            client: '200'
+            destination: D50_200
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
@@ -27,4 +29,5 @@ server:
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
-        component: student00.sap.training.dynamcpage2
+        component: student00.sap.training.dynamicpage
+        ui5Theme: sap_fiori_3
