@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.5"
+metadata:
+  name: sap.training.endnavigation
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: D50_100
+          url: http://d50-pripro:443
+        app:
+          name: ZUX410NAVEND00
+          description: UX410 - 05 - End
+          package: ZUX400XX
+          transport: D50K900357
