@@ -97,16 +97,35 @@ UX403SOLUTIONS<br>
 • executable with script "start fiori run"<br>
 <br>
 05_firstcds.student00<br>
-• Fiori Elements - Report Object Page<br>
+• Fiori Elements - List Report Object Page<br>
 • Backend Service: ZCDS_UX403_SADL_04_CDS; OData created by Annotation in CDS view ZCDS_UX403_SADL_04; D50/200<br>
 • executable with script "start fiori run"<br>
 <br>
 06_cdsmetaext.student00<br>
-
-
-
-
-
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_META_04_CDS; OData created by Annotation in CDS view ZCDS_UX403_META_04; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+07_basiclist.student00<br>
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_LIST_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_LIST_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+08_searchfilter.student00<br>
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_FILT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_FILT_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+09_objectpage.student00<br>
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_OBJP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_OBJP_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+10_headerfacet.student00<br>
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_HDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_HDFT_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
 
 
 
