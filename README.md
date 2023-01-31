@@ -42,25 +42,25 @@ UX400SOLUTIONS<br>
 • executable with script "start fiori run"<br>
 <br>
 09_propertybinding_sol
-• Local JSON Model / Property Binding with Radio Button, Input and Text Field
+• Local JSON Model / Property Binding with Radio Button, Input and Text Field<br>
 • SAPUI5 freestyle<br>
 • no backend service<br>  
 • executable with script "start fiori run"<br>
 <br>
 10_aggregationbinding_sol<br>
-• Local JSON Model (using model/data.json) / Aggregationbinding with Carousel and List Control
+• Local JSON Model (using model/data.json) / Aggregationbinding with Carousel and List Control<br>
 • SAPUI5 freestyle<br>
 • no backend service<br>  
 • executable with script "start-noflp; using index.html" <br>
 <br>
 11_elementbinding_sol<br>
-• Local JSON Model (using model/data.json) / Interaction between two tables / Master and Child data
+• Local JSON Model (using model/data.json) / Interaction between two tables / Master and Child data<br>
 • SAPUI5 freestyle<br>
 • no backend service<br>
 • executable with script  "start-noflp; using index.html" <br>
 <br>
 12_types_sol<br>
-• Local JSON Model for using type validation
+• Local JSON Model for using type validation<br>
 • SAPUI5 freestyle<br>
 • no backend service<br>
 • executable with script  "start-noflp; using index.html" <br>
@@ -72,7 +72,7 @@ UX400SOLUTIONS<br>
 • executable with script  "start-noflp; using index.html" <br>
 <br>
 14_localization_sol<br>
-• Using i18n Resource Model for Localization
+• Using i18n Resource Model for Localization<br>
 • SAPUI5 freestyle<br>
 • no backend service<br>
 • executable with script "start fiori run"<br>
@@ -127,7 +127,7 @@ UX403SOLUTIONS<br>
 • Backend Service: ZCDS_UX403_HDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_HDFT_00; D50/200<br>
 • executable with script "start fiori run"<br>
 <br>
-11_bodyfacet.student00
+11_bodyfacet.student00<br>
 • Fiori Elements - List Report Object Page<br>
 • Backend Service: ZCDS_UX403_BDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_BDFT_00; D50/200<br>
 • executable with script "start fiori run"<br>
@@ -178,7 +178,7 @@ UX410SOLUTIONS<br>
 <br>
 04_diagram<br>
 • Display data with line graph<br>
-• Local JSON Model (using model/SalesFigures.json)
+• Local JSON Model (using model/SalesFigures.json)<br>
 • no backend service<br>
 • executable with script "start fiori run"<br>
 <br>
@@ -187,7 +187,7 @@ UX410SOLUTIONS<br>
 • Application deployed to backend as BSP ZUX410NAVSTAR00<br>
 • Semantic objects ZUX410NavStart00 and ZUX410NavEnd00 created<br>
 • FLP Catalog ZUX410_BC_00 created --> you need authorization for this catalog to execute these apps<br>
-• Tile "UX410 start navigation" created
+• Tile "UX410 start navigation" created<br>
 • no backend service<br>
 <br>
 05_endnavigation<br>
