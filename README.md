@@ -236,7 +236,7 @@ UX410SOLUTIONS<br>
 11_ZUX410APP00Extension<br>
 • Extension project for AppId student00.sap.training.dynamicpage<br>
 • Adaption project<br>
-• not deployed; executable only in preview mode of SAP UI5 Visual Editor;
+• not deployed; executable only in preview mode of SAP UI5 Visual Editor;<br>
 •• mark manifest.appdescr_variant,<br> 
 •• use context menu and press Open SAP UI5 Visual Editor<br>
 <br>
