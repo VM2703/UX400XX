@@ -126,7 +126,49 @@ UX403SOLUTIONS<br>
 • Backend Service: ZCDS_UX403_HDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_HDFT_00; D50/200<br>
 • executable with script "start fiori run"<br>
 <br>
-
+11_bodyfacet.student00
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_BDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_BDFT_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+12_externallink.student00<br>
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_LINK_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_LINK_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+13_datavis.student00<br>
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_VIS_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_VIS_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+14_chart.student00<br>
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_CHART_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_CHART_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+15_overviewpage.student00<br>
+• Fiori Elements - Overview Page<br>
+• Backend Service: ZCDS_UX403_OVP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_OVP_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+16_alp.student00<br>
+• Fiori Elements - Analytical List Page<br>
+• Backend Service: ZCDS_UX403_ALP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_ALP_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+19_listext.student00<br>
+• Fiori Elements - List Report Object Page<br>
+• Backend Service: ZCDS_UX403_BDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_BDFT_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+20_ovpext.student00<br>
+• Fiori Elements - Overview Page<br>
+• Backend Service: ZCDS_UX403_OVP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_OVP_00; D50/200<br>
+• executable with script "start fiori run"<br>
+<br>
+<br>
+UX410SOLUTIONS<br>
+--------------<br>
 
 
 
