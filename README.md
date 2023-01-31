@@ -8,7 +8,9 @@ Open a terminal session for the respective project (exercise). For that, mark th
 Start context menu by clicking right mouse key and choose "Open in Integrated Terminal".<br>
 Type in CLI command "npm install" and press ENTER. After Execution, you can run the project. 
 Mark again project folder and choose "Preview Application"<br>
-
+<br>
+All necessary backend resources (CDS views; MetadataExtensions; SEGW sources for ZUX_TRAVEL) are stored in package ZUX400XX<br>
+<br>
 UX400SOLUTIONS<br>
 --------------<br>
 04_modularization_sol<br>
@@ -91,14 +93,15 @@ UX403SOLUTIONS<br>
 --------------<br>
 04_firstelements.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: GWSAMPLE_BASIC; created by SAP; Based on tables from package S_NWDEMO_MODEL_DDIC; Sales Demo Model<br>
+• Backend Service: GWSAMPLE_BASIC; created by SAP; Based on tables from package S_NWDEMO_MODEL_DDIC; Sales Demo Model; D50/200<br>
 • executable with script "start fiori run"<br>
 <br>
 05_firstcds.student00<br>
 • Fiori Elements - Report Object Page<br>
-• Backend Service: ZCDS_UX403_SADL_04_CDS; OData created by Annotation in CDS view ZCDS_UX403_SADL_04<br>
+• Backend Service: ZCDS_UX403_SADL_04_CDS; OData created by Annotation in CDS view ZCDS_UX403_SADL_04; D50/200<br>
 • executable with script "start fiori run"<br>
 <br>
+06_cdsmetaext.student00<br>
 
 
 
