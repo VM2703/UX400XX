@@ -237,7 +237,7 @@ UX410SOLUTIONS<br>
 • Extension project for AppId student00.sap.training.dynamicpage<br>
 • Adaption project<br>
 • not deployed; executable only in preview mode of SAP UI5 Visual Editor; mark manifest.appdescr_variant,<br> 
-  use context menu and press Open SAP UI5 Visual Editor<br>
+    use context menu and press Open SAP UI5 Visual Editor<br>
 <br>
 12_fiorielements<br>
 • Fiori Elements - List Report Object Page<br>
