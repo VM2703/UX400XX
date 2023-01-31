@@ -41,7 +41,7 @@ UX400SOLUTIONS<br>
 • no backend service<br>
 • executable with script "start fiori run"<br>
 <br>
-09_propertybinding_sol
+09_propertybinding_sol<br>
 • Local JSON Model / Property Binding with Radio Button, Input and Text Field<br>
 • SAPUI5 freestyle<br>
 • no backend service<br>
