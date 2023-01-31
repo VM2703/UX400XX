@@ -12,7 +12,7 @@ Mark again project folder and choose "Preview Application"<br>
 All necessary backend resources (CDS views; MetadataExtensions; SEGW sources for ZUX_TRAVEL) are stored in system SAP D50 / package ZUX400XX<br>
 <br>
 UX400SOLUTIONS<br>
---------------<br>
+-------------------<br>
 04_modularization_sol<br>
 • SAPUI5 freestyle<br>
 • no backend service<br>
@@ -82,6 +82,7 @@ UX400SOLUTIONS<br>
 • SAPUI5 freestyle<br>
 • Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
 • executable with script "start fiori run"<br>
+<br>
 17_components_sol<br>
 • Component Creation with Button event showing fragment; included in index.html<br>
 • SAPUI5 freestyle<br>
@@ -90,7 +91,7 @@ UX400SOLUTIONS<br>
 <br>
 <br>
 UX403SOLUTIONS<br>
---------------<br>
+-------------------<br>
 04_firstelements.student00<br>
 • Fiori Elements - List Report Object Page<br>
 • Backend Service: GWSAMPLE_BASIC; created by SAP; Based on tables from package S_NWDEMO_MODEL_DDIC; Sales Demo Model; D50/200<br>
@@ -168,7 +169,88 @@ UX403SOLUTIONS<br>
 <br>
 <br>
 UX410SOLUTIONS<br>
---------------<br>
+-------------------<br>
+03_helloworld<br>
+• Only Main.view / Main.controller with Text Control for Output
+• SAPUI5 freestyle<br>
+• no backend service<br>
+• executable with script "start fiori run"<br>
+<br>
+04_diagram<br>
+• Display data with line graph
+• Local JSON Model (using model/SalesFigures.json)
+• no backend service<br>
+• executable with script "start fiori run"<br>
+<br>
+05_startnavigation<br>
+• Navigate to second application by press event
+• Application deployed to backend as BSP ZUX410NAVSTAR00
+• Semantic objects ZUX410NavStart00 and ZUX410NavEnd00 created
+• FLP Catalog ZUX410_BC_00 created --> you need authorization for this catalog to execute these apps
+• Tile "UX410 start navigation" created
+• no backend service<br>
+<br>
+05_endnavigation<br>
+• Target application called from 05_startnavigation
+• Application deployed to backend as BSP ZUX410NAVEND00
+• Tile "UX410 end navigation" created
+• no backend service<br>
+<br>
+06_dynamicpage<br>
+• Master Table with Detail view displayed by item click event
+• SAPUI5 freestyle<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• executable with script "start fiori run" (starts index.html; no FLP)<br>
+<br>
+07_flexiblecolumnlayout<br>
+• Master-Detail using Flexible Column Layout
+• SAPUI5 freestyle<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• executable with script "start fiori run" (starts index.html; no FLP)<br>
+<br>
+08_valuehelp<br>
+• Implement Value Helps
+• SAPUI5 freestyle<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• executable with script "start fiori run" (FLPSandbox)<br>
+<br>
+09_dynamicpage<br>
+• Implement a List Report (Master table + Object page)
+• SAPUI5 freestyle<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• executable with script "start fiori run" (FLPSandbox)<br>
+<br>
+10_dynamicpage<br>
+• Implement a List Report (Master table + Object page with child tables based on selected Master table item)
+• SAPUI5 freestyle<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• executable with script "start fiori run" (FLPSandbox)<br>
+<br>
+11_dynamicpage<br>
+• Basic App 10_dynamicpage extended for a Extension point
+• Deployed to SAP D50; AppID in student00.sap.training.dynamicpage (manifest.json)
+• SAPUI5 freestyle<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• executable with script "start fiori run" (FLPSandbox)<br>
+<br>
+11_ZUX410APP00Extension<br>
+• Extension project for AppId student00.sap.training.dynamicpage
+• Adaption project<br>
+• not deployed; executable only in preview mode of SAP UI5 Visual Editor; mark manifest.appdescr_variant - use contect menu and press Open SAP UI5 Visual Editor<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
