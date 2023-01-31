@@ -26,31 +26,31 @@ UX400SOLUTIONS<br>
 06_layout_sol<br>
 • SimpleForm with layout examples<br>
 • SAPUI5 freestyle<br>
-• no backend service<br>  
+• no backend service<br>
 • executable with script "start fiori run"<br>
 <br>
 07_fragments_sol<br>
 • Fragments with JavaScript and XML<br>
 • SAPUI5 freestyle<br>
-• no backend service<br>  
+• no backend service<br>
 • executable with script "start fiori run"<br>
 <br>
 08_dialogs_sol<br>
 • Fragment Dialog with Input field<br>
 • SAPUI5 freestyle<br>
-• no backend service<br>  
+• no backend service<br>
 • executable with script "start fiori run"<br>
 <br>
 09_propertybinding_sol
 • Local JSON Model / Property Binding with Radio Button, Input and Text Field<br>
 • SAPUI5 freestyle<br>
-• no backend service<br>  
+• no backend service<br>
 • executable with script "start fiori run"<br>
 <br>
 10_aggregationbinding_sol<br>
 • Local JSON Model (using model/data.json) / Aggregationbinding with Carousel and List Control<br>
 • SAPUI5 freestyle<br>
-• no backend service<br>  
+• no backend service<br>
 • executable with script "start-noflp; using index.html" <br>
 <br>
 11_elementbinding_sol<br>
