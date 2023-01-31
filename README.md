@@ -236,9 +236,20 @@ UX410SOLUTIONS<br>
 11_ZUX410APP00Extension<br>
 • Extension project for AppId student00.sap.training.dynamicpage
 • Adaption project<br>
-• not deployed; executable only in preview mode of SAP UI5 Visual Editor; mark manifest.appdescr_variant - use contect menu and press Open SAP UI5 Visual Editor<br>
+• not deployed; executable only in preview mode of SAP UI5 Visual Editor; mark manifest.appdescr_variant, 
+  use context menu and press Open SAP UI5 Visual Editor<br>
 <br>
-
+12_fiorielements<br>
+• Fiori Elements - List Report Object Page<br>
+• Includes exercises 13 (Search and Filter) and 14 (Object page)
+• Backend Service: ZUX410_C_FLIGHTUI00_CDS; OData created by Annotation in CDS view ZUX410_C_FLIGHTUI00; D50/200<br>
+• executable with script "start fiori run" (FLPSandbox)<br>
+<br>
+15_fiorielements<br>
+• Fiori Elements - List Report Object Page - Copy from previous exercise 12_fiorielements<br>
+• Object page with table facet group; steered by CDS annotations
+• Backend Service: ZUX410_C_FLIGHTUI01_CDS; OData created by Annotation in CDS view ZUX410_C_FLIGHTUI01; D50/200<br>
+• executable with script "start fiori run" (FLPSandbox)<br>
 
 
 
