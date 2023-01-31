@@ -9,7 +9,7 @@ Start context menu by clicking right mouse key and choose "Open in Integrated Te
 Type in CLI command "npm install" and press ENTER. After Execution, you can run the project. 
 Mark again project folder and choose "Preview Application"<br>
 <br>
-All necessary backend resources (CDS views; MetadataExtensions; SEGW sources for ZUX_TRAVEL) are stored in package ZUX400XX<br>
+All necessary backend resources (CDS views; MetadataExtensions; SEGW sources for ZUX_TRAVEL) are stored in system SAP D50 / package ZUX400XX<br>
 <br>
 UX400SOLUTIONS<br>
 --------------<br>
