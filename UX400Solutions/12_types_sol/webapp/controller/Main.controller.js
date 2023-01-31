@@ -12,7 +12,7 @@ sap.ui.define([
 
             onInit: function () {
                 var oModel = new JSONModel();
-                this.getView().setModel(oModel);
+                this.getView().setModel(oModel); 
             }
 
         });
