@@ -20,7 +20,7 @@ UX400SOLUTIONS<br>
 <br>
 05_views_sol<br>
 • SAPUI5 freestyle<br>
-• no backend service<br>  
+• no backend service<br>
 • executable with script "start fiori run"<br>
 <br>
 06_layout_sol<br>
