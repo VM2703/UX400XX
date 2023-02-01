@@ -6,7 +6,7 @@ Important Hints concerning all exercises:<br>
 • Approach:<br>
 -- Open a terminal session for the respective project (exercise). For that, mark the requested project in the explorer tree.<br>
 -- Start context menu by clicking right mouse key and choose "Open in Integrated Terminal".<br>
--- Type in CLI command "npm install" and press ENTER. After Execution, you can run the project. 
+-- Type in CLI command "npm install" and press ENTER. After Execution, you can run the project.<br> 
 --Mark again project folder and choose "Preview Application"<br>
 <br>
 • All necessary backend resources (CDS views; MetadataExtensions; SEGW sources for ZUX_TRAVEL) are stored in system SAP D50 / package ZUX400XX<br>
