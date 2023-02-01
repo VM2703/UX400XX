@@ -83,13 +83,13 @@ UX400SOLUTIONS<br>
 16_odata_sol<br>
 • Interaction between two tables / Master and Child data / Using OData Function Import for Cancel and Creation booking<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
 • executable with script "start fiori run"<br>
 <br>
 17_components_sol<br>
 • Component Creation with Button event showing fragment; included in index.html<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
 • executable with script "start fiori run"<br>
 <br>
 <br>
@@ -202,38 +202,38 @@ UX410SOLUTIONS<br>
 06_dynamicpage<br>
 • Master Table with Detail view displayed by item click event<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
 • executable with script "start fiori run" (starts index.html; no FLP)<br>
 <br>
 07_flexiblecolumnlayout<br>
 • Master-Detail using Flexible Column Layout<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
 • executable with script "start fiori run" (starts index.html; no FLP)<br>
 <br>
 08_valuehelp<br>
 • Implement Value Helps<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 <br>
 09_dynamicpage<br>
 • Implement a List Report (Master table + Object page)<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 <br>
 10_dynamicpage<br>
 • Implement a List Report (Master table + Object page with child tables based on selected Master table item)<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 <br>
 11_dynamicpage<br>
 • Basic App 10_dynamicpage extended for a Extension point<br>
 • Deployed to SAP D50; AppID in student00.sap.training.dynamicpage (manifest.json)<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 <br>
 11_ZUX410APP00Extension<br>
