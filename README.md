@@ -10,7 +10,7 @@ Important Hints concerning all exercises:<br>
 -- Mark again project folder and choose "Preview Application"<br>
 <br>
 • All necessary backend resources (CDS views; MetadataExtensions; SEGW sources for ZUX_TRAVEL) are stored<br> 
-    in system SAP D50 / package ZUX400XX<br>
+--in system SAP D50 / package ZUX400XX<br>
 <br>
 • yaml-Files for all exercises refer to D50/200 where backend services are needed<br>
 <br>
