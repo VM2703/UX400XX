@@ -83,13 +83,13 @@ UX400SOLUTIONS<br>
 16_odata_sol<br>
 • Interaction between two tables / Master and Child data / Using OData Function Import for Cancel and Creation booking<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel<br>
 • executable with script "start fiori run"<br>
 <br>
 17_components_sol<br>
 • Component Creation with Button event showing fragment; included in index.html<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel<br>
 • executable with script "start fiori run"<br>
 <br>
 <br>
@@ -97,77 +97,77 @@ UX403SOLUTIONS<br>
 -------------------<br>
 04_firstelements.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: GWSAMPLE_BASIC; created by SAP; Based on tables from package S_NWDEMO_MODEL_DDIC; Sales Demo Model; D50/200<br>
+• Backend Service: GWSAMPLE_BASIC; created by SAP; Based on tables from package S_NWDEMO_MODEL_DDIC; Sales Demo Model<br>
 • executable with script "start fiori run"<br>
 <br>
 05_firstcds.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_SADL_04_CDS; OData created by Annotation in CDS view ZCDS_UX403_SADL_04; D50/200<br>
+• Backend Service: ZCDS_UX403_SADL_04_CDS; OData created by Annotation in CDS view ZCDS_UX403_SADL_04<br>
 • executable with script "start fiori run"<br>
 <br>
 06_cdsmetaext.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_META_04_CDS; OData created by Annotation in CDS view ZCDS_UX403_META_04; D50/200<br>
+• Backend Service: ZCDS_UX403_META_04_CDS; OData created by Annotation in CDS view ZCDS_UX403_META_04<br>
 • executable with script "start fiori run"<br>
 <br>
 07_basiclist.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_LIST_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_LIST_00; D50/200<br>
+• Backend Service: ZCDS_UX403_LIST_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_LIST_00<br>
 • executable with script "start fiori run"<br>
 <br>
 08_searchfilter.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_FILT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_FILT_00; D50/200<br>
+• Backend Service: ZCDS_UX403_FILT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_FILT_00<br>
 • executable with script "start fiori run"<br>
 <br>
 09_objectpage.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_OBJP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_OBJP_00; D50/200<br>
+• Backend Service: ZCDS_UX403_OBJP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_OBJP_00<br>
 • executable with script "start fiori run"<br>
 <br>
 10_headerfacet.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_HDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_HDFT_00; D50/200<br>
+• Backend Service: ZCDS_UX403_HDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_HDFT_00<br>
 • executable with script "start fiori run"<br>
 <br>
 11_bodyfacet.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_BDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_BDFT_00; D50/200<br>
+• Backend Service: ZCDS_UX403_BDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_BDFT_00<br>
 • executable with script "start fiori run"<br>
 <br>
 12_externallink.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_LINK_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_LINK_00; D50/200<br>
+• Backend Service: ZCDS_UX403_LINK_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_LINK_00<br>
 • executable with script "start fiori run"<br>
 <br>
 13_datavis.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_VIS_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_VIS_00; D50/200<br>
+• Backend Service: ZCDS_UX403_VIS_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_VIS_00<br>
 • executable with script "start fiori run"<br>
 <br>
 14_chart.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_CHART_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_CHART_00; D50/200<br>
+• Backend Service: ZCDS_UX403_CHART_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_CHART_00<br>
 • executable with script "start fiori run"<br>
 <br>
 15_overviewpage.student00<br>
 • Fiori Elements - Overview Page<br>
-• Backend Service: ZCDS_UX403_OVP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_OVP_00; D50/200<br>
+• Backend Service: ZCDS_UX403_OVP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_OVP_00<br>
 • executable with script "start fiori run"<br>
 <br>
 16_alp.student00<br>
 • Fiori Elements - Analytical List Page<br>
-• Backend Service: ZCDS_UX403_ALP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_ALP_00; D50/200<br>
+• Backend Service: ZCDS_UX403_ALP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_ALP_00<br>
 • executable with script "start fiori run"<br>
 <br>
 19_listext.student00<br>
 • Fiori Elements - List Report Object Page<br>
-• Backend Service: ZCDS_UX403_BDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_BDFT_00; D50/200<br>
+• Backend Service: ZCDS_UX403_BDFT_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_BDFT_00<br>
 • executable with script "start fiori run"<br>
 <br>
 20_ovpext.student00<br>
 • Fiori Elements - Overview Page<br>
-• Backend Service: ZCDS_UX403_OVP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_OVP_00; D50/200<br>
+• Backend Service: ZCDS_UX403_OVP_00_CDS; OData created by Annotation in CDS view ZCDS_UX403_OVP_00<br>
 • executable with script "start fiori run"<br>
 <br>
 <br>
@@ -202,38 +202,38 @@ UX410SOLUTIONS<br>
 06_dynamicpage<br>
 • Master Table with Detail view displayed by item click event<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel<br>
 • executable with script "start fiori run" (starts index.html; no FLP)<br>
 <br>
 07_flexiblecolumnlayout<br>
 • Master-Detail using Flexible Column Layout<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel<br>
 • executable with script "start fiori run" (starts index.html; no FLP)<br>
 <br>
 08_valuehelp<br>
 • Implement Value Helps<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 <br>
 09_dynamicpage<br>
 • Implement a List Report (Master table + Object page)<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 <br>
 10_dynamicpage<br>
 • Implement a List Report (Master table + Object page with child tables based on selected Master table item)<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 <br>
 11_dynamicpage<br>
 • Basic App 10_dynamicpage extended for a Extension point<br>
 • Deployed to SAP D50; AppID in student00.sap.training.dynamicpage (manifest.json)<br>
 • SAPUI5 freestyle<br>
-• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel; D50/200<br>
+• Backend Service: ZUX_TRAVEL_SRV; created with TA SEGW - project ZUX_TRAVEL; Based on sflight-datamodel<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 <br>
 11_ZUX410APP00Extension<br>
@@ -246,13 +246,13 @@ UX410SOLUTIONS<br>
 12_fiorielements<br>
 • Fiori Elements - List Report Object Page<br>
 • Includes exercises 13 (Search and Filter) and 14 (Object page)<br>
-• Backend Service: ZUX410_C_FLIGHTUI00_CDS; OData created by Annotation in CDS view ZUX410_C_FLIGHTUI00; D50/200<br>
+• Backend Service: ZUX410_C_FLIGHTUI00_CDS; OData created by Annotation in CDS view ZUX410_C_FLIGHTUI00<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 <br>
 15_fiorielements<br>
 • Fiori Elements - List Report Object Page - Copy from previous exercise 12_fiorielements<br>
 • Object page with table facet group; steered by CDS annotations<br>
-• Backend Service: ZUX410_C_FLIGHTUI01_CDS; OData created by Annotation in CDS view ZUX410_C_FLIGHTUI01; D50/200<br>
+• Backend Service: ZUX410_C_FLIGHTUI01_CDS; OData created by Annotation in CDS view ZUX410_C_FLIGHTUI01<br>
 • executable with script "start fiori run" (FLPSandbox)<br>
 
 
